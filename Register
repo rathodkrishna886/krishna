@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register </h1>
+    <hr>
+    <form action="success.html" method="post" enctype="multipart/form-data">
+        <table border="2" align="center" cellpadding="5" width="50%">
+            <tr>
+                <td>Enter Your name</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Mobile No
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="Mobile" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Select date of birth</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="date" name="dob" required >
+                </td>
+            </tr>
+            <tr>
+                <td>Select gender</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="male">
+                        <input id="male" type="radio" name="gender" value="1"> Male
+                    </label>
+                    <br>
+                    <label for="female">
+                        <input id="female" type="radio" name="gender" value="0"> Female
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Language you can speak/read/write</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gujarati">
+                        <input id="gujarati" type="checkbox" name="Gujarati" value="1">Gujarati <br>
+                    </label>
+                    <label for="hindi">
+                        <input id="hindi" type="checkbox" name="Hindi" value="2">Hindi <br>
+                    </label>
+                    <label for="english">
+                        <input id="english" type="checkbox" name="English" value="4">English
+                    </label>
+                    <label for="Sanskrit">
+                        <input id="Sanskrit" type="checkbox" name="Sanskrit" value="8">Sanskrit
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>select photo (<2MB)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="file" name="photo" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    select country
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="country" >
+                        <option value="">select country</option>
+                        <option value="1">India</option>
+                        <option value="2">Russia</option>
+                        <option value="3">Canada</option>
+                        <option value="4">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your address</td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="address" cols="50" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" name="save">save & submit
+                        
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

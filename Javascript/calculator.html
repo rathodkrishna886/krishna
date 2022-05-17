@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Mathematical calculator</h1>
+    <hr>
+    <form action="">
+        <table align="center" border="2" cellpadding="12" width="50%">
+            <tr>
+                <td>Enter first number </td>
+            </tr>
+            <tr>    
+                <td>
+                    <input type="number" name="first" id="first">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter second number</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="second" id="second"></td>   
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="button" value="addition" onclick="addition();">
+                    <input type="button" value="substraction" onclick="substraction();">
+                    <input type="button" value="multiplication" onclick="multiplication();">
+                    <input type="button" value="division" onclick="division();">
+                </td>
+            </tr>
+            <tr>
+                <td id="result">
+                    result will br display
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var first,second; //global variable 
+        //user defind function 
+        function getinput(){
+            first = document.getElementById("first").value;
+            second = document.getElementById("second").value;
+            first = parseInt(first);
+            second = parseInt(second);
+        }
+        function addition()
+        {
+                    //all the code in this function will execute when addition function will be called.
+        getinput(); //calling getinput function
+        var addition = first + second; // local variable
+        document.getElementById("result").innerHTML=addition;
+        }
+       function substraction()
+        {
+            getinput();
+            var substraction = first - second;
+            document.getElementById("result").innerHTML=substraction;
+        }
+       function multiplication()
+       {
+            getinput();
+            var multiplication = first * second;
+            document.getElementById("result").innerHTML=multiplication;
+        }
+        function division()
+        {
+            getinput();
+            var division = first / second;
+            document.getElementById("result").innerHTML=division;
+        }
+</script>
+</body>
+</html>
