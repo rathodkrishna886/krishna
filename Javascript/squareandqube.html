@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>find squre and qube </h1>
+    <form action="">
+        <table>
+            <tr>
+                <td> Enter number </td>
+            </tr>
+            <tr>
+                <td> <input type="number" name="number" id="number"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="squre" onclick="squre();">
+                </td>
+                <tr>
+                    <td><input type="button" value="qube" onclick="qube();"></td>  
+                </tr>
+            </tr>
+            <tr>
+                <td id="result">result here</td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var number;
+        function getinput()
+        {
+            number = document.getElementById("number").value;
+            number = parseInt(number);
+            console.log(number);
+        }
+        function squre()
+        {
+            getinput();
+            var squre = number * number 
+            document.getElementById("result").innerHTML=squre;
+        }
+        function qube()
+        {
+        getinput();
+        var qube = number * number * number
+        document.getElementById("result").innerHTML=qube;
+        }
+    </script>
+</body>
+</html>

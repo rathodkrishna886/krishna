@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">calculate and display bmi</h1>
+    <form action="">
+        <table align="center" border="1" cellpadding="2" width="50%">
+            <tr>
+                <td>Enter your weight</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="weight" id="weight"></td>
+            </tr>
+            <tr>
+                <td>Enter your height</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="height" id="height"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="bmicalculate" onclick="bmicalculate();"> </td>
+            </tr>
+            <tr>
+                <td id="result"> Result here</td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function getinput()
+        {
+            weight = document.getElementById("weight").value;
+            height = document.getElementById("height").value;
+            weight = parseInt(weight);
+            height = parseInt(height);
+                    }
+        function bmicalculate(){
+        
+            getinput();
+            var bmi = (weight / ((height * height)/10000)); 
+            document.getElementById("result").innerHTML=bmi;
+        }
+    </script>
+</body>
+</html>

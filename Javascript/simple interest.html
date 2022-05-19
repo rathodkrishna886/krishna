@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple interest</h1>
+    <form action="">
+    <table align="center" border="1" cellpadding="2" width="50%">
+        <tr>
+            <td>enter the amount </td>
+        </tr>
+        <tr>
+            <td><input type="number" name="amount" id="amount"></td>
+        </tr>
+        <tr>
+            <td>enter the rate</td>
+        </tr>
+        <tr>
+            <td><input type="number" name="rate" id="rate"></td>
+        </tr>
+        <tr>
+            <td>enter the year</td>
+        </tr>
+        <tr>
+            <td><input type="number" name="year" id="year"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="simpleinterest" onclick="simpeinterst();"></td>
+        </tr>
+        <tr>
+            <td id="result"> result display</td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        function getinput()
+        {
+            amount = document.getElementById("amount").value;
+            rate = document.getElementById("rate").value;
+            year = document.getElementById("year").value;
+            //amount = parseInt(amount);
+            //rate = parseInt(rate);
+           // year = parseInt(year);
+        }
+        function simpeinterst()
+        {
+            getinput();
+            var simpleinterest = (amount*rate*year)/100;
+            document.getElementById("result").innerHTML = simpleinterest;
+        }
+    </script>
+</body>
+</html>

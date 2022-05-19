@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">calculate and display bmi</h1>
+    <form action="">
+        <table align="center" border="1" cellpadding="2" width="50%">
+            <tr>
+                <td>Enter your weight</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="weight" id="weight"></td>
+            </tr>
+            <tr>
+                <td>Enter your height</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="foot" id="foot" placeholder="foot">
+                    <input type="number" name="inch" id="inch" placeholder="inch">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="bmicalculate" onclick="bmicalculate();"> </td>
+            </tr>
+            <tr>
+                <td id="result"> Result here</td>
+            </tr>
+        </table>
+    </form>
+    <script>
+       
+       var weight,inch,foot;
+        function getinput()
+        {
+            weight = document.getElementById("weight").value;
+            inch = document.getElementById("inch").value;
+            foot = document.getElementById("foot").value;
+            weight = parseInt(weight);
+            inch = parseInt(inch);
+            foot = parseInt(foot);
+            console.log(foot + " " + inch + " " +weight);
+
+        }
+        function bmicalculate()
+        {
+            getinput();
+            var totalinch = ((foot*12) + inch);
+            console.log(foot + " " + inch + " " +weight);
+
+            var meter = totalinch / 39.37 ;
+            var bmicalculate = weight/(meter*meter);
+            document.getElementById("result").innerHTML=bmicalculate;
+         }
+    </script>
+</body>
+</html>
