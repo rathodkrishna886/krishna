@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple if else dicision making statement </h1>
+    <form action="">
+        <table align="center" cellpadding="2" border="2" width="50%">
+            <tr>
+                <td>Enter Height</td>
+               <td> <input type="number" name="height" placeholder="enter height"> </td> 
+            </tr>
+            <tr>
+                <td>Enter width</td>
+                <td>
+                    <input type="number" name="width" placeholder="enter width">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                   <input type="button" value="find share is square or not" 
+                   onclick="shape();">
+                </td>
+            </tr>
+            </table>
+            <p id="output"></p>
+    </form>
+    <script src="script.js"></script>
+<script>
+        function shape(){
+            var height = parseInt(document.getElementsByName("height")[0].value);
+            var width  = parseInt(document.getElementsByName("width")[0].value);
+            if(height==width)
+            {
+                $('output').innerText = "<h2>shape is not square</h2>";
+            }
+            else
+            {
+                $('output').innerText = "<h2>shape is not square</h2>";
+            }
+        }
+</script>
+</body>
+</html>
