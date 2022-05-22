@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple if else dicision making statement</h1>
+    <form action="">
+        <table align="center" border="2" cellpadding="1" width="50%">
+            <tr>
+                <td>Enter height</td>
+                <td><input type="number" name="height" id="height" placeholder="enter height"></td>
+            </tr>
+            <tr>
+                <td>Enter width</td>
+                <td><input type="number" name="width" id="width" placeholder="enter width"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="find share is square or not" onclick="shape()">
+                </td>
+            </tr>
+            </table>
+            <p id="output"></p>
+            </form>
+            <script src="script.js"></script>
+            <script>
+                 function shape(){
+                     var height = parseInt(document.getElementsByName("height")[0].value);
+                     var width = parseInt(document.getElementsByName("width")[0].value);
+                     console.log(height);
+                     console.log(width);
+                  //if else if ladder decision making (outer)
+                  if(isNaN(height) == true)
+                  {
+                      alert("invalid/empty height");
+                      $("height").focus();
+                  }
+                  else if (isNaN(width) == true) 
+        {
+          alert("invalid/empty width");
+          $("width").focus();
+        } 
+        else 
+        {
+            //if else decision making(inner)
+            if (height == width) 
+            {
+                $("output").innerText = "<h2>shape is squre</h2>";
+            } 
+            else 
+            {
+                $("output").innerText = "<h2>shape is not square</h2>";
+            }
+        }
+      }   
+</script>
+</body>
+</html>

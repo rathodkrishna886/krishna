@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple if else dicision making statement</h1>
+    <form action="">
+        <table align="center" border="2" cellpadding="1" width="50%">
+            <tr>
+                <td>Enter first number</td>
+                <td><input type="number" name="first" id="first" placeholder="first"></td>
+            </tr>
+            <tr>
+                <td>Enter second number</td>
+                <td><input type="number" name="second" id="second" placeholder="second"></td>
+            </tr>
+            <tr>
+                <td>Enter third number </td>
+                <td><input type="number " name="third" id="third" placeholder="third"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="find largest number of given three number" onclick="largestnumber()">
+                </td>
+            </tr>
+        </table>
+        <p id="output"></p>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        function largestnumber(){
+            var first = parseInt(document.getElementById("first").value);
+            var second = parseInt(document.getElementById("second").value);
+            var third = parseInt(document.getElementById("third").value);
+
+            if(first>second && first>third)
+		{
+            $("output").innerText = "<h2>first is largest number</h2>"; 
+		}
+		else if(second>first && second>third)
+		{
+			$("output").innerText = "<h2>second is largest number</h2>";
+		}
+		else if(third>first && third>first)
+		{
+			$("output").innerText = "<h2>third is largest number</h2>";
+		}
+	}
+</script>
+</body>
+</html>
