@@ -7,64 +7,58 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>simple if else dicision making statement</h1>
+    <h1>example of while loop</h1>
+    <h4>write a program to print multiplication table of given number</h4>
     <form action="">
-      <table align="center" width="50%" cellpadding="5" border="1">
+      <table border="1" align="center" cellpadding="10" width="50%">
         <tr>
-          <td>Enter height</td>
           <td>
-            <input type="number" name="height" id="height" placeholder="enter height" />
+            <input type="number" id="number" placeholder="enter number" />
           </td>
-        </tr>
-        <tr>
-          <td>Enter width</td>
           <td>
-            <input type="number" name="width" id="width" placeholder="enter width" />
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
             <input
               type="button"
-              value="find share is square or not"
-              onclick="shape();"
+              value="Generate Table"
+              onclick="generate_table();"
             />
           </td>
         </tr>
+        <tr>
+          <td colspan="2" align="center" id="resulttd"></td>
+        </tr>
       </table>
-      <p id="output"></p>
     </form>
-    <script src="script.js"></script>
-    <script>
-      function shape() {
-        var height = parseInt(document.getElementsByName("height")[0].value);
-        var width = parseInt(document.getElementsByName("width")[0].value);
-        console.log(height);
-        console.log(width);
-        //if else if ladder decision making (outer)
-        if (isNaN(height) == true) 
-        {
-          alert("invalid/empty height");
-          $("height").focus();
-        } 
-        else if (isNaN(width) == true) 
-        {
-          alert("invalid/empty width");
-          $("width").focus();
-        } 
-        else 
-        {
-            //if else decision making(inner)
-            if (height == width) 
+    <ul type="square">
+      <script src="script.js"></script>
+      <script>
+        /*
+                10 x 1  =10
+                10 x 2  =20
+                10 x 3  =30
+                10 x 10  =30
+          */
+        function generate_table() {
+          var number = parseInt($("number").value); //5
+          if (isNaN(number) == true) 
+          {
+            alert("it is not number");
+          } 
+          else 
+          {
+            var multiplier = 1;
+            var result,output;
+            $("resulttd").innerHTML = ""; //clear
+            while(multiplier<=10)
             {
-                $("output").innerText = "<h2>shape is squre</h2>";
-            } 
-            else 
-            {
-                $("output").innerText = "<h2>shape is not square</h2>";
+                result = number * multiplier; //10
+                output = number + " X " + multiplier + " = " + result;
+                $("resulttd").innerHTML = $("resulttd").innerHTML + "<br/>" + output;
+                multiplier=multiplier+1; //3
+            
             }
+          }
         }
-      }
-    </script>
+      </script>
+    </ul>
   </body>
 </html>

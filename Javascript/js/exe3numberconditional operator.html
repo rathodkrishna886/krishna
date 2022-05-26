@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td>Enter third number </td>
-                <td><input type="number " name="third" id="third" placeholder="third"></td>
+                <td><input type="number" name="third" id="third" placeholder="third"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -37,17 +37,17 @@
             var second = parseInt(document.getElementById("second").value);
             var third = parseInt(document.getElementById("third").value);
 
-            if(first>second && first>third)
+        if(first>second && first>third)
 		{
-            $("output").innerText = "<h2>first is largest number</h2>"; 
+            $("output").innerHTML = "<h2>first is largest number</h2>"; 
 		}
-		else if(second>first && second>third)
+		if(second>first && second>third)
 		{
-			$("output").innerText = "<h2>second is largest number</h2>";
+			$("output").innerHTML = "<h2>second is largest number</h2>";
 		}
-		else if(third>first && third>first)
+		if(third>first && third>second)
 		{
-			$("output").innerText = "<h2>third is largest number</h2>";
+			$("output").innerHTML = "<h2>third is largest number</h2>";
 		}
 	}
 </script>

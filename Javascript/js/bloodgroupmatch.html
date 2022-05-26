@@ -1,67 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>simple if else dicision making statement</h1>
-    <form action="">
-            <p>Please select your first blood group</p>
-            <input type="radio" id="A+" name="A+" value="A+">
-            <label for="A+">A+</label><br>
-
-            <input type="radio" id="A-" name="A-" value="A-">
-            <label for="A-">A-</label><br>
-
-            <input type="radio" id="B+" name="B+" value="B+">
-            <label for="B+">B+</label><br>
-
-            <input type="radio" id="B-" name="B-" value="B-">
-            <label for="B-">B-</label><br>
-
-            <input type="radio" id="AB+" name="AB+" value="AB+">
-            <label for="AB+">AB+</label><br>
-
-            <input type="radio" id="AB-" name="AB-" value="AB-">
-            <label for="AB+">AB-</label><br>
-
-            <input type="radio" id="O+" name="O+" value="O+">
-            <label for="O+">O+</label><br>
-
-            <input type="radio" id="O-" name="O-" value="O-">
-            <label for="O-">O-</label><br>
-          
-            <br>  
-          
-            <p>Please select your second blood group </p>
-
-            <input type="radio" id="A+" name="A+" value="A+">
-            <label for="A+">A+</label><br>
-
-            <input type="radio" id="A-" name="A-" value="A-">
-            <label for="A-">A-</label><br>
-
-            <input type="radio" id="B+" name="B+" value="B+">
-            <label for="B+">B+</label><br>
-
-            <input type="radio" id="B-" name="B-" value="B-">
-            <label for="B-">B-</label><br>
-
-            <input type="radio" id="AB+" name="AB+" value="AB+">
-            <label for="AB+">AB+</label><br>
-
-            <input type="radio" id="AB-" name="AB-" value="AB-">
-            <label for="AB+">AB-</label><br>
-
-            <input type="radio" id="O+" name="O+" value="O+">
-            <label for="O+">O+</label><br>
-            
-            <input type="radio" id="O-" name="O-" value="O-">
-            <label for="O-">O-</label><br>
-
-          </form>
+  </head>
+  <body>
+    <h1>Blood group matching application</h1>
+    <hr />
+    <form id="myform">
+      <table border="1" cellpadding="10" align="center" width="80%">
+        <tr>
+          <td>select first person blood group</td>
+          <td>
+            <label for="a+">
+              <input type="radio" name="first" id="a+" value="a+" />a+
+            </label>
+            <label for="a-">
+              <input type="radio" name="first" id="a-" value="a-" />a-
+            </label>
+            <label for="b+">
+              <input type="radio" name="first" id="b+" value="b+" />b+
+            </label>
+            <label for="b-">
+              <input type="radio" name="first" id="b-" value="b-" />b-
+            </label>
+            <label for="ab+">
+              <input type="radio" name="first" id="ab+" value="ab+" />ab+
+            </label>
+            <label for="ab-">
+              <input type="radio" name="first" id="ab-" value="ab-" />ab-
+            </label>
+            <label for="o+">
+              <input type="radio" name="first" id="o+" value="o+" />o+
+            </label>
+            <label for="o-">
+              <input type="radio" name="first" id="o-" value="o-" />o-
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>select second person blood group</td>
+          <td>
+            <label for="a+">
+              <input type="radio" name="second" id="sa+" value="a+" />a+
+            </label>
+            <label for="sa-">
+              <input type="radio" name="second" id="sa-" value="a-" />a-
+            </label>
+            <label for="sb+">
+              <input type="radio" name="second" id="sb+" value="b+" />b+
+            </label>
+            <label for="sb-">
+              <input type="radio" name="second" id="sb-" value="b-" />b-
+            </label>
+            <label for="sab+">
+              <input type="radio" name="second" id="sab+" value="ab+" />ab+
+            </label>
+            <label for="sab-">
+              <input type="radio" name="second" id="sab-" value="ab-" />ab-
+            </label>
+            <label for="so+">
+              <input type="radio" name="second" id="so+" value="o+" />o+
+            </label>
+            <label for="so-">
+              <input type="radio" name="second" id="so-" value="o-" />o-
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input
+              type="button"
+              value="find match or not"
+              onclick="findmatch();"/>
+          </td>
+        </tr>
+          <tr id="output"></tr> 
+      </table>
+    </form>
+    <script src="script.js"></script>
+    <script>
+      let findmatch = function () 
+      {
+        
+        var p1 = $("myform").elements['first'].value;
+        var p2 = $("myform").elements['second'].value;
+        
+            if ((p1=='a+') && (p2=='a+' || p2=='a-' || p2=='o+' || p2=='o-')) 
+            {
+                alert("you can donate blood group");
+            }
+            else if ((p1=='a-') && (p2=='a-' || p2=='o-')) {
+                alert("you can donate blood group");
+            }
+            else if ((p1=='b+') && (p2=='b+' || p2=='b-' || p2=='o+' || p2=='o-')) {
+                alert("you can donate blood group");
+            }
+            else if ((p1=='b-') && (p2=='b+' || p2=='b-' || p2=='o+' || p2=='o-')) {
+                alert("you can donate blood group");
+            }
+            else if ((p1=='ab+') && (p2=='a+' || p2=='a-' || p2==' b+' || p2=='b-' || p2=='o+' || p2=='o-' || p2=='ab+' || p2=='ab-')) {
+                alert("you can donate blood group");
+            }
+            else if ((p1=='ab-') && (p2=='a-' || p2=='b-' || p2=='o-' || p2=='ab-')) {
+                alert("you can donate blood group");
+            }
+            else if ((p1=='o+') && (p2=='o+' || p2=='o-')) {
+                alert("you can donate blood group");
+            }
+            else if ((p1=='o-') && (p2=='o-')) {
+                alert("you can donate blood group");
+            }
+            else {
+                alert("you can not donate blood group");
+            } 
+        }
+    </script>
 </body>
 </html>
