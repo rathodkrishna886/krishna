@@ -7,14 +7,27 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>print given name 10 times</h1>
+    <h1>example of while loop</h1>
+    <form>
+      <table align="center" cellpadding="2" width="50%" border="2">
+          <tr>
+              <td>enter first number </td>
+              <td><input type="text" name="name" id="name"></td>
+          </tr>
+          <td colspan="2">
+            <input type="button" value="name enter" onclick="nameprint">
+        </td>
       <script>
-        var name = "krishna";
-        console.log(name)
-        while(name<10)
+        function nameprint(){
+          
+        }
+        var i = "krishna";
+        console.log(i);
+        while(i<=5)
         {
-          document.write("<p>" + name  + "</p>");
-          name = name + 1; //expression 2
+          document.write("<p>"  + krishna  + "</p>");
+          
+          i = i + 1; //expression 2
         }
       </script>
   </body>

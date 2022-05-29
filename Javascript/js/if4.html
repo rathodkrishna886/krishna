@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>switch decision making statement </h1>
+    <form id="myform" name="myform">
+        <table align="center" cellpadding="2" width="50%" border="2">
+            <tr>
+                <td>enter first number </td>
+                <td><input type="number" name="first" id="first" placeholder="enter first number"></td>
+            </tr>
+            <tr>
+                <td>enter second number</td>
+                <td><input type="number" name="second" id="second" placeholder="enter second number"></td>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="plus">
+                        <input type="radio" name="choice" id="plus" value="1"> addition
+                    </label>
+                    <label for="subscription">
+                        <input type="radio" name="choice" id="subscription" value="2"> minus
+                    </label>
+                    <label for="multiplication">
+                        <input type="radio" name="choice" id="multiply" value="3"> multiplication
+                    </label>
+                    <label for="division">
+                        <input type="radio" name="choice" id="division" value="4"> division
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="calculate result" onclick="calculate();">
+                </td>
+            <tr>
+                <td colspan="2" align="center">
+                    <p id="output"></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="script.js">    </script>
+    <script>
+        function calculate() {
+            var first = parseInt($("first").value);
+            var second = parseInt($("second").value);
+            console.log(first);
+            console.log(second);
+            var choice = parseInt(document.myform.choice.value);
+            if (isNaN(first) == true) {
+                alert("first is empty/invalid");
+                $("first").focus();
+            }
+            else if (isNaN(second) == true) {
+                alert("second is empty/invalid");
+                $("second").focus();
+            }
+            else if (isNaN(choice) == true) {
+                alert("select choice");
+            }
+            else {
+                let result = 0;
+                switch (choice) {
+                    case 1:
+                        result = first + second;
+                        break;
+                    case 2: //if choice==2
+                        result = first - second;
+                        break;
+                    case 3:
+                        result = first * second;
+                        break;
+                    case 4:
+                        result = first / second;
+                        break;
+                }
+                $('output').innerHTML = "<font size='+5' color='red'>" + result + "</font>";
+            }
+        }
+    </script>
+</body>
+
+</html>
