@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conditional Operator ? </h1>
+    <form action="">
+        <table align="center" width="50%" cellpadding="5" border="1">
+            <tr>
+                <td>Enter height</td>
+                <td>
+                    <input type="number" name="height" placeholder="enter height">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter width</td>
+                <td>
+                    <input type="number" name="width" placeholder="enter width">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button"  value="find shape orientation" 
+                    onclick="shape();">
+                </td>
+            </tr>
+        </table>
+        <p id="output"></p>
+    </form>
+<script src="script.js"></script>
+<script>
+    function shape(){
+        var height = parseInt(document.getElementsByName("height")[0].value);
+        var width = parseInt(document.getElementsByName("width")[0].value);
+         if(height==width)
+         {
+             $('output').innerHTML = "<h2>shape is square</h2>";
+         }
+         else if(height>width)
+         {
+         $('output').innerHTML = "<h2>shape is portrait</h2>";
+         }
+         else 
+         {
+             $('output').innerHTML = "<h2>shape is landscape</h2>";
+         }
+        // or you can write below code 
+       // $('output').innerHTML = (height==width) ? "<h2>shape is square</h2>" : (height>width) ?  "<h2>shape is  portrait</h2>" : "<h2>shape is landscape</h2>";
+    }
+</script>
+</body>
+</html>

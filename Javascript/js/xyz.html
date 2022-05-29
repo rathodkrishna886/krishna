@@ -1,107 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>switch decision making statement</h1>
-    <form id="myform" name="myform">
-      <table align="center" width="50%" cellpadding="5" border="1">
-        <tr>
-          <td>Enter first number</td>
-          <td>
-            <input type="number" id="first" name="first" placeholder="enter first number" />
-          </td>
-        </tr>
-        <tr>
-          <td>Enter second number</td>
-          <td>
-            <input type="number" id="second" name="second"  placeholder="enter second number" />
-          </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <label for="plus">
-                    <input type="radio" name="choice" id="plus" value="1"> addition
-                </label>
-                <label for="minus">
-                    <input type="radio" name="choice" id="minus" value="2"> minus
-                </label>
-                <label for="multiply">
-                    <input type="radio" name="choice" id="multiply" value="3"> multiply
-                </label>
-                <label for="division">
-                    <input type="radio" name="choice" id="division" value="4"> division
-                </label>
-                
-            </td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
-            <input
-              type="button"
-              value="calculate result"
-              onclick="calculate();"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center">
-            <p id="output"></p>
-          </td>
-        </tr>
-      </table>
-     
-    </form>
-    <script src="script.js"></script>
-    <script>
-      function calculate() {
-        var first = parseInt($("first").value);
-        var second = parseInt($("second").value);
-        console.log(first);
-        console.log(second);
-        var choice = parseInt(document.myform.choice.value);
-        //outer decision making 
-        if (isNaN(first)==true)
-        {
-            alert("first is empty/invalid");
-            $("first").focus();
-        }
-        else if (isNaN(second)==true)
-        {
-            alert("second is empty/invalid");
-            $("second").focus();
-        }
-        else if (isNaN(choice)==true)
-        {
-            alert("select choice");
-        }
-        else 
-        { //inner decision making 
-            //all inputs are valid
-            let result = 0;
-            switch(choice)
-            {
-                case 1: //if choice==1
-                  result = first + second;
-                  break;
-                case 2: //if choice==2
-                  result = first - second;
-                  break;
-                case 3:
-                  result = first * second;
-                  break;
-                case 4:
-                  result = first / second;
-                  break;
-
-            }
-            $("output").innerHTML = "<font size='+5' color='red'>" + result + "</font>";
-        }
-      }
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>conditinal operator</h1>
+  <form action="">
+    <table align="center" width="50%" cellpadding="4" border="1">
+      <tr>
+        <td> enter your height</td>
+        <td> <input type="number" name="height" placeholder="enter height"></td>
+      </tr>
+      <tr>
+        <td> enter your Width</td>
+        <td> <input type="number" name="Width" placeholder="enter Width"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="button" value="find shape is square or not" onclick="shape();">
+        </td>
+      </tr>
+    </table>
+    <p id="output"></p>
+  </form>
+  <script src="script.js"></script>
+  <script>
+    function shape() {
+      var height = parseInt(document.getElementsByName("height").value);
+      var width = parseInt(document.getElementsByName("width ").value);
+      console.log(height);
+      console.log(width);
+    }
+  </script>
+</body>
 </html>
