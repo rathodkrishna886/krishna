@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>while loop </h1>
+    <h3>write a program to print multiplication table of given number</h3>
+    <form action="">
+        <table align="center" cellpadding="7" width="40%" border="2">
+            <tr>
+                <td><input type="number" id="number" placeholder="enter number"></td>
+                <td><input type="button" value="enter number" onclick="generatetable();"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" id="resultid"></td>
+            </tr>
+        </table>
+    </form>
+    <ul type="squre">
+        <script>
+            function generatetable() {
+                number = document.getElementById("number").value;
+                number = parseInt(number)
+            }
+            function multiplication (){
+                generatetable();
+                var multiplier = 1 
+                var mul =  number * multiplier;
+                output = number + "X" + multiplier + "=" + resultid;  
+                document.getElementById("resultid").innerHTML = mul
+            } 
+                
+                //console.log(number);
+               /* if (isNaN(number) == true) {
+                    alert("its not number");
+                }
+                else {
+                    var multiplier = 1
+                    var result, output;
+                  //  $("resultid").innerHTML = "";
+                }
+                {
+                    result = number * multiplier;
+                    output = number + "X" + multiplier + "=" + result;
+                  //  $("resultid").innerHTML = $("resultid").innerHTML + "output";
+                }*/
+
+            
+        </script>
+    </ul>
+</body>
+</html>
