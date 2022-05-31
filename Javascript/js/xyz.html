@@ -8,15 +8,15 @@
 </head>
 <body>
   <h1>conditinal operator</h1>
-  <form action="">
+  <form action=" ">
     <table align="center" width="50%" cellpadding="4" border="1">
       <tr>
         <td> enter your height</td>
-        <td> <input type="number" name="height" placeholder="enter height"></td>
+        <td> <input type="number" id="height" placeholder="enter height"></td>
       </tr>
       <tr>
         <td> enter your Width</td>
-        <td> <input type="number" name="Width" placeholder="enter Width"></td>
+        <td> <input type="number" id="width" placeholder="enter Width"></td>
       </tr>
       <tr>
         <td colspan="2" align="center">
@@ -26,11 +26,11 @@
     </table>
     <p id="output"></p>
   </form>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
   <script>
     function shape() {
-      var height = parseInt(document.getElementsByName("height").value);
-      var width = parseInt(document.getElementsByName("width ").value);
+      var height = document.getElementById("height").value;
+      var width = document.getElementById("width").value;
       console.log(height);
       console.log(width);
     }

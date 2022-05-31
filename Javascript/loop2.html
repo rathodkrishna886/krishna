@@ -15,7 +15,7 @@
         <table align="center" cellpadding="7" width="40%" border="2">
             <tr>
                 <td><input type="number" id="number" placeholder="enter number"></td>
-                <td><input type="button" value="enter number" onclick="generatetable();"></td>
+                <td><input type="button" value="enter number" onclick="multiplication();"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center" id="resultid"></td>
@@ -32,9 +32,18 @@
                 generatetable();
                 var multiplier = 1 
                 var mul =  number * multiplier;
-                output = number + "X" + multiplier + "=" + resultid;  
-                document.getElementById("resultid").innerHTML = mul
+                output = number + "X" + multiplier + "=" + mul;  
+                document.getElementById("resultid").innerHTML = output;
+               // answer=(isNaN(number));
+               // document.getElementById("resultid").innerHTML = answer;
             } 
+            function multiplication (){
+                generatetable();
+                var multi = 2 
+                var ml =  number * multi;
+                output = number + "X" + multi + "=" + mul;  
+                document.getElementById("resultid").innerHTML = output;
+            }
                 
                 //console.log(number);
                /* if (isNaN(number) == true) {
