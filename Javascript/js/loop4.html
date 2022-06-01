@@ -38,7 +38,8 @@
                 10 x 10  =30
           */
         function generate_table() {
-          var number = parseInt($("number").value); //5
+          var number =($("number").value); //5
+          log(number);
           if (isNaN(number) == true) 
           {
             alert("it is not number");
@@ -49,6 +50,7 @@
             var result,output;
             $("resulttd").innerHTML = ""; //clear
             while(multiplier<=10)
+          
             {
                 result = number * multiplier; //10
                 output = number + " X " + multiplier + " = " + result;
@@ -62,3 +64,24 @@
     </ul>
   </body>
 </html>
+/* function multiplication (){
+  generatetable();
+ var multiplier = 1;
+  var mul =  number * multiplier;
+  output = number + "X" + multiplier + "=" + mul;  
+  document.getElementById("resultid").innerHTML = output +"<br>";
+
+  var multiplier = 2;
+  var mul =  number * multiplier;
+  var output1 = number + "X" + multiplier + "=" + mul;  
+  document.getElementById("resultid").innerHTML += output1 +"<br>";
+
+  var multiplier = 3;
+  var mul =  number * multiplier;
+  var output2 = number + "X" + multiplier + "=" + mul;  
+  document.getElementById("resultid").innerHTML += "<b>"+ output2 +"</b>" +"<br>";
+
+ // answer=(isNaN(number));
+ // document.getElementById("resultid").innerHTML = answer;
+} */
+//console.log(number);
