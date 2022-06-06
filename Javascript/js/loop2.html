@@ -23,16 +23,19 @@
         </table>
     </form>
     <ul type="squre">
+        <script src="script.js"></script>
         <script>
             function generatetable() {
-                var number =($("number").value);
-                if (isNaN(number) == true) {
+                var number = parseInt($("number").value);
+                if (isNaN(number) == true) 
+                {
                     alert("its not number");
                 }
                 else {
                     var multiplier = 1;
                     var result, output;
-                    $("resultid").innerHTML = ""; // old value clear 
+                    $("resultid").innerHTML = ""; // old value clear
+                    while(multiplier<=10) 
                 
                 {
                     result = number * multiplier;

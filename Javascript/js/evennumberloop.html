@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> print all the even numbers as list between given range</h1>
+    <form action="">
+        <table border="2" align="center" cellpadding="2" >
+            <tr>
+                <td>
+                    enter number 
+                </td>
+                <td> <input type="number" id="number" placeholder="enter number">                </td>
+            </tr>
+            <tr align="center">
+                <td align="center" colspan="2"><input type="button" value="find out even number" onclick="findevennumber();"></td>
+            </tr>
+            <tr><td id="output" colspan="2" align="center"></td></tr>
+          </table>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        function findevennumber(){
+            var number = parseInt($("number").value);
+            var even = 0;
+            while(even<number){
+            even++;
+            if(even%2==0)
+            {
+            $('output').innerHTML=$("output").innerHTML += even+ "<br/>";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
