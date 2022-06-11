@@ -26,15 +26,14 @@
     <script>
         function findevennumber(){
             var number = parseInt($("number").value);
-            var even = 0;
-            while(even<number){ 
-            even++;
+            for(let even=0; even<number; even++){
             if(even%2==0)
             {
-            $('output').innerHTML=$("output").innerHTML += even+ "<br/>";
+            $('output').innerHTML += even+ "<br/>";
             }
         }
-    }
+        }
+    
     </script>
 </body>
 </html>

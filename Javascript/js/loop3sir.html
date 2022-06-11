@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>example of for loop </h1>
+    <hr>
+    <h3>Compound interest calculator</h3>
+    <form action="">
+        <table border="2" align="center" cellpadding="3" width="60%">
+            <tr>
+                <td>Enter amount</td>
+                <td><input type="number" id="amount"></td>
+            </tr>
+            <tr>
+                <td>enter rate</td>
+                <td><input type="number" id="rate"></td>
+            </tr>
+            <tr>
+                <td>Enter year</td>
+                <td><input type="number" id="year"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="gernrate interest" onclick="calculate();">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" id="result"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        let calculate = function() {
+            let amount, rate, year;
+            amount = parseInt($("amount").value);
+            rate = parseInt($("rate").value);
+            year = parseInt($("year").value);
+            console.log(amount + " " + rate + " " + year);
+        
+        if (isNaN(amount) == true) 
+        {
+            alert("amount is empty")
+        } 
+        else if (isNaN(rate) == true) 
+        {
+            alert("rate is empty")
+        } 
+        else if (isNaN(year) == true) 
+        {
+            alert("year is empty")
+        }
+        else
+        {
+            let original_amount = amount;
+            let interest;
+            for(let count=1; count<=year; count++)
+            {
+            interest = (amount * rate * 1)/100; //100
+            amount = amount + interest; //1100
+            }
+            amount = amount.toFixed(2)
+            var only_interest = amount - original_amount.toFixed(2);
+            var output = "final amount = " + amount +   "  total interest " + only_interest;
+            $("result").innerText = output;
+        }
+    };
+    </script>
+</body>
+</html>
