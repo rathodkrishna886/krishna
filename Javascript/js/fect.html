@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> write a program to factorial of given number </h1>
+    <hr>
+    <form action="">
+        <table align="center" cellpadding="2" width="50%" border="2">
+            <tr>
+                <td>enter the number</td>
+                <td><input type="number" id="number" placeholder="enter number"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2"> <input type="button" value="findout factorial number"
+                        onclick="factorial();"> </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" id="output"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        let factorial = function () {
+            let number = parseInt($("number").value)
+            var fac=1;
+                while(fac<=number){
+                     fac = fac*(number-i);
+                    $('output').innerHTML = fac;
+                }    </script>   
+            }
+</body>
+</html>

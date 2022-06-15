@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>program to display zodiac symbol & given zodiac sign from given birth day and month</h1>
+    <hr>
+    <p id ="output1"></p>
+    <p id ="output2"></p>
+    <script>
+        var female_month = 4, female_date = 2;
+        var male_month = 4, male_date = 2;
+        
+        if ((female_month == 3 && female_date >= 21) || (female_month == 4 && female_date <= 19)) {
+            var Female = "aries";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 4 && female_date >= 20) || (female_month == 5 && female_date <= 20)) {
+            var Female = "taurus";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 5 && female_date >= 21) || (female_month == 6 && female_date <= 20)) {
+            var Female = "gemini";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 6 && female_date >= 21) || (female_month == 7 && female_date <= 22)) {
+            var Female = "cancer";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 7 && female_date >= 23) || (female_month == 8 && female_date <= 22)) {
+            var Female = "leo";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 8 && female_date >= 23) || (female_month == 9 && female_date <= 22)) {
+            var Female = "Virgo";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 9 && female_date >= 23) || (female_month == 10 && female_date <= 22)) {
+            var Female = "Libra";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 10 && female_date >= 23) || (female_month == 11 && female_date <= 21)) {
+            var Female = "Scorpio";
+            document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 11 && female_date >= 22) || (female_month == 12 && female_date <= 21)) {
+            var Female = "Sagittarius";
+           document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 12 && female_date >= 22) || (female_month == 1 && female_date <= 19)) {
+            var Female = "Capricorn";
+           document.getElementById("output1").innerHTML="Female sign is " +Female;
+        }
+        else if ((female_month == 1 && female_date >= 20) || (female_month == 2 && female_date <= 18)) {
+            var Female = "Aquarius";
+           document.getElementById("output1").innerHTML="Female sign is " + Female;
+        }
+        else if ((female_month == 2 && female_date >= 19) || (female_month == 3 && female_date <= 20)) {
+            var Female = "Pisces";
+           document.getElementById("output1").innerHTML="Female sign is " + Female;
+        }
+        if ((male_month == 3 && male_date >= 21) || (male_month == 4 && male_date <= 19)) {
+            var Male = "aries";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 4 && male_date >= 20) || (male_month == 5 && male_date <= 20)) {
+            var Male = "taurus";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 5 && male_date >= 21) || (male_month == 6 && male_date <= 20)) {
+            var Male = "gemini";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 6 && male_date >= 21) || (male_month == 7 && male_date <= 22)) {
+            var Male = "cancer";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 7 && male_date >= 23) || (male_month == 8 && male_date <= 22)) {
+            var Male = "leo";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 8 && male_date >= 23) || (male_month == 9 && male_date <= 22)) {
+            var Male = "Virgo";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 9 && male_date >= 23) || (male_month == 10 && male_date <= 22)) {
+            var Male = "Libra";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 10 && male_date >= 23) || (male_month == 11 && male_date <= 21)) {
+            var Male = "Scorpio";
+            document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 11 && male_date >= 22) || (male_month == 12 && male_date <= 21)) {
+            var Male = "Sagittarius";
+           document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 12 && male_date >= 22) || (male_month == 1 && male_date <= 19)) {
+            var Male = "Capricorn";
+           document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 1 && male_date >= 20) || (male_month == 2 && male_date <= 18)) {
+            var Male = "Aquarius";
+           document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+        else if ((male_month == 2 && male_date >= 19) || (male_month == 3 && male_date <= 20)) {
+            var Male = "Pisces";
+           document.getElementById("output2").innerHTML="Male sign is " +Male;
+        }
+
+        document.write("<br>")
+        
+        if ((Female == "aries" && Male == 'aries') ||(Female == "aries" && Male == 'aries') )
+        {
+            document.write("you are Favrable");
+        }
+     
+
+    </script>
+</body>
+</html>

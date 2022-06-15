@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Write a javascript program to calculate income tax, gross income, net income from monthly income given by user</h1>
+    <hr>
+    <script src="script.js"></script>
+    <script>
+        var grossincome = 55000, netincome = 52000, amount;
+        var total_income = grossincome*12;
+        document.write(total_income);
+        document.write("<br>")
+        if (total_income<300000)
+        {
+            var amount = (total_income*5)/100
+           document.write("Total Incometax return rate is"+ amount);
+        }
+        else if(amount>=300000 && total_income<500000)
+        {
+            var amount = (total_income*10)/100
+           document.write("Total Incometax return rate is"+ amount);
+        }
+        else if(total_income>=500000 && total_income<800000)
+        {
+            var amount = (total_income*20)/100
+           document.write("Total Incometax return rate is"+ amount);
+        }
+        else if(total_income>=800000)
+        {
+            var amount = (total_income*30)/100
+           document.write("Total Incometax return rate is"+ amount);
+        }
+    
+    </script>
+</body>
+</html>
