@@ -14,8 +14,8 @@
     <p id ="output1"></p>
     <p id ="output2"></p>
     <script>
-        var female_month = 4, female_date = 2;
-        var male_month = 4, male_date = 2;
+        var female_month = 8, female_date = 25;
+        var male_month = 7, male_date = 12;
         
         if ((female_month == 3 && female_date >= 21) || (female_month == 4 && female_date <= 19)) {
             var Female = "aries";
@@ -65,7 +65,7 @@
             var Female = "Pisces";
            document.getElementById("output1").innerHTML="Female sign is " + Female;
         }
-        if ((male_month == 3 && male_date >= 21) || (male_month == 4 && male_date <= 19)) {
+        else if ((male_month == 3 && male_date >= 21) || (male_month == 4 && male_date <= 19)) {
             var Male = "aries";
             document.getElementById("output2").innerHTML="Male sign is " +Male;
         }
@@ -112,16 +112,117 @@
         else if ((male_month == 2 && male_date >= 19) || (male_month == 3 && male_date <= 20)) {
             var Male = "Pisces";
            document.getElementById("output2").innerHTML="Male sign is " +Male;
-        }
-
-        document.write("<br>")
-        
-        if ((Female == "aries" && Male == 'aries') ||(Female == "aries" && Male == 'aries') )
+        }        
+        else if ((Female == "gemini" && Male == "aries") ||(Female == "aries" && Male == "aries")
+             || (Female == "leo" && Male == "aries")|| (Female == "Libra" && Male == "aries") 
+             || (Female == "Sagittarius" && Male == 'aries')|| (Female == "Aquarius" && Male == 'aries'))    
         {
-            document.write("you are Favrable");
+            document.write("you are Favourable");
         }
-     
-
+        else if((Female == "taurus" && Male == "taurus") 
+            ||(Female == "cancer" && Male == "taurus") ||(Female == "Virgo" && Male == "taurus") 
+            || (Female == "Scorpio" && Male == "taurus") || (Female == "Capricorn" && Male == "taurus") ||(Female == "Pisces" && Male == "taurus") )
+            {
+            document.write("you are Favourable");
+           }
+           
+        else if((Female == "aries" && Male == "gemini") 
+            ||(Female == "gemini" && Male == "gemini") ||(Female == "leo" && Male == "gemini") 
+            || (Female == "Libra" && Male == "gemini") || (Female == "Sagittarius" && Male == "gemini") 
+            ||(Female == "Aquarius" && Male == "gemini") )
+            {
+            document.write("you are Favourable");
+           }
+           else if((Female == "taurus" && Male == "cancer") 
+            ||(Female == "cancer" && Male == "cancer") ||(Female == "Virgo" && Male == "cancer") 
+            || (Female == "Scorpio" && Male == "cancer") || (Female == "Capricorn" && Male == "cancer") 
+            ||(Female == "Pisces" && Male == "cancer") )
+            {
+            document.write("you are Favourable");
+           }
+           else if((Female == "aries" && Male == "leo") 
+            ||(Female == "gemini" && Male == "leo") ||(Female == "leo" && Male == "leo") 
+            || (Female == "Libra" && Male == "leo") || (Female == "Sagittarius" && Male == "leo") 
+            ||(Female == "Aquarius" && Male == "leo") )
+            {
+            document.write("you are Favourable");
+           }
+           else if((Female == "taurus" && Male == "Virgo") 
+            ||(Female == "cancer" && Male == "Virgo") ||(Female == "Virgo" && Male == "Virgo") 
+            || (Female == "Scorpio" && Male == "Virgo") || (Female == "Capricorn" && Male == "Virgo") 
+            ||(Female == "Pisces" && Male == "Virgo") )
+            {
+            document.write("you are Favourable");
+           } 
+           else if((Female == "aries" && Male == "Libra") 
+            ||(Female == "gemini" && Male == "Libra") ||(Female == "leo" && Male == "Libra") 
+            || (Female == "Libra" && Male == "Libra") || (Female == "Sagittarius" && Male == "Libra") 
+            ||(Female == "Aquarius" && Male == "Libra") )
+            {
+            document.write("you are Favourable");
+           } 
+           else if((Female == "taurus" && Male == "Scorpio") 
+            ||(Female == "cancer" && Male == "Scorpio") ||(Female == "Virgo" && Male == "Scorpio") 
+            || (Female == "Scorpio" && Male == "Scorpio") || (Female == "Capricorn" && Male == "Scorpio") 
+            ||(Female == "Pisces" && Male == "Scorpio") )
+            {
+            document.write("you are Favourable");
+           }  
+           else if((Female == "aries" && Male == "Sagittarius") 
+            ||(Female == "gemini" && Male == "Sagittarius") ||(Female == "leo" && Male == "Sagittarius") 
+            || (Female == "Libra" && Male == "Sagittarius") || (Female == "Sagittarius" && Male == "Sagittarius") 
+            ||(Female == "Aquarius" && Male == "Sagittarius") )
+            {
+            document.write("you are Favourable");
+           }
+           else if((Female == "taurus" && Male == "Capricorn") 
+            ||(Female == "cancer" && Male == "Capricorn") ||(Female == "Virgo" && Male == "Capricorn") 
+            || (Female == "Scorpio" && Male == "Capricorn") || (Female == "Capricorn" && Male == "Capricorn") 
+            ||(Female == "Pisces" && Male == "Capricorn") )
+            {
+            document.write("you are Favourable");
+           } 
+           else if((Female == "aries" && Male == "Aquarius") 
+            ||(Female == "gemini" && Male == "Aquarius") ||(Female == "leo" && Male == "Aquarius") 
+            || (Female == "Libra" && Male == "Aquarius") || (Female == "Sagittarius" && Male == "Aquarius") 
+            ||(Female == "Aquarius" && Male == "Aquarius") )
+            {
+            document.write("you are Favourable");
+           } 
+           else if((Female == "taurus" && Male == "Pisces") 
+            ||(Female == "cancer" && Male == "Pisces") ||(Female == "Virgo" && Male == "Pisces") 
+            || (Female == "Scorpio" && Male == "Pisces") || (Female == "Capricorn" && Male == "Pisces") 
+            ||(Female == "Pisces" && Male == "Pisces") )
+            {
+            document.write("you are Favourable");
+           } 
+           else if((Female == "taurus" && Male == "aries") 
+            ||(Female == "Virgo" && Male == "aries") ||(Female == "Scorpio" && Male == "aries") 
+            || (Female == "Pisces" && Male == "aries"))
+            {
+            document.write("you are Less Favourable");
+           }
+           else if((Female == "aries" && Male == "taurus") 
+            ||(Female == "gemini" && Male == "taurus") ||(Female == "Libra" && Male == "taurus") 
+            || (Female == "Sagittarius" && Male == "taurus"))
+            {
+            document.write("you are Less Favourable");
+           }
+           else if((Female == "taurus" && Male == "gemini") 
+            ||(Female == "cancer" && Male == "gemini") ||(Female == "Scorpio" && Male == "gemini"))
+            {
+            document.write("you are Less Favourable");
+           }
+           else if((Female == "gemini" && Male == "cancer") 
+            ||(Female == "leo" && Male == "cancer") ||(Female == "Sagittarius" && Male == "cancer")|| (Female == "Aquarius" && Male == "cancer"))
+            {
+            document.write("you are Less Favourable");
+           }
+           else if((Female == "gemini" && Male == "cancer") 
+            ||(Female == "leo" && Male == "cancer") ||(Female == "Sagittarius" && Male == "cancer")|| (Female == "Aquarius" && Male == "cancer"))
+            {
+            document.write("you are Less Favourable");
+           }
     </script>
 </body>
 </html>
