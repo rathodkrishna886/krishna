@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="btnhide">Hide Intro Paragraph</button>
+    <button type="button" id="buttonfirst">Hide li of first ul</button>
+    <button type="button" id="btnhideeachfirst">Hide li of first ul</button>
+    <h1>jquery selectors</h1>
+    <h4>paragraph tag with class is intro</h4>
+    <p class="intro">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sunt, distinctio nobis molestias modi aspernatur cumque temporibus consectetur. Officia laborum distinctio recusandae aliquam ea quibusdam consequatur voluptatem delectus nam! Et veniam incidunt dicta, quod beatae ad sed. Consequuntur delectus laborum labore pariatur culpa et sequi. Delectus aliquam maiores quam necessitatibus.
+    </p>
+    <h3>paragraph tag without class is intro</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic provident dolores totam corrupti aspernatur, quam similique laboriosam repudiandae quos. Reiciendis optio perspiciatis cupiditate soluta ea cum vitae modi sed ratione voluptas repellendus magnam laudantium, quis ab! Blanditiis corrupti veniam quia.
+    </p>
+    <h3>div tag with intro class</h3>
+    <div class="intro">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit fuga delectus, porro quaerat aperiam nihil nesciunt dolore non cumque exercitationem excepturi eaque corrupti magni consequatur recusandae minus. Qui fuga vel magni magnam adipisci ut quaerat distinctio quo vero eius obcaecati eum sunt deserunt labore consectetur odio voluptatibus harum, aliquid, eaque similique et, corporis consequuntur ducimus. Inventore nostrum aut non?
+    </div>
+    <ul>
+        <li>gujarat</li>
+        <li>mp</li>
+        <li>kasmir</li>
+        <li>manipur</li>
+    </ul>
+    <ul>
+        <li>potato</li>
+        <li>tamato</li>
+        <li>lady finger</li>
+        <li>chili</li>
+    </ul>
+    <ul>
+        <li>dog</li>
+        <li>cat</li>
+        <li>cow</li>
+        <li>puppy</li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnhide").click(function(){
+                $("p.intro").hide("slow");
+            });
+            $("#buttonfirst").click(function(){
+                $("ul li:first").hide(2000);
+            });
+            $("#btnhideeachfirst").click(function(){
+                $("ul li:first-child").hide("slow");
+            })
+        })
+    </script>
+</body>
+</html>

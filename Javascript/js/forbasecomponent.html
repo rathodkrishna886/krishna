@@ -24,7 +24,7 @@
        <input type="button" value="find base and component" onclick="findvalue();"></td>
  </tr>
  <tr>
-    <td colspan="2" align="center" id="output"> result</td>
+    <td colspan="2" align="center" id="output"> </td>
  </tr>
       </table> 
    </form>
@@ -34,12 +34,10 @@
       var base = parseInt($("base").value);
       var component = parseInt($("component").value);
       var result = 1;
-      var count = 0;
-      while(count<component)
+      for(let count=0;count<component;count++)
       {
       result=result*base;
-      count = count+1;
-     $("output").innerHTML+="<br>"+result;
+     $("output").innerHTML+=result +"<br>";
       }
    } 
    </script>
