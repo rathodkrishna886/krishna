@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jquery Hide and show effect</h1>
+    <table align="center" cellpadding="8" width="80%" border="☻">
+        <tr>
+            <td align="center"><button id="hide">Hide</button></td>
+            <td align="center">
+                <button id="show">show</button>  
+            </td>
+            <td align="center">
+                <button id="toggle">toggle</button>
+            </td>
+        </tr>
+    </table>
+      <h1 align="center"> Table of motivation sentance</h1>
+        <table class="table2"  align="center" cellpadding="8" width="50%" border="☻" class="table1">
+        <tr>
+            <td align="center"colspan="3" id="first">
+                Nothing is impossible
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="3" id="second">
+                There is nothing impossible to they who will try
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="3" id="third">
+                The bad news is time flies
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="3" id="forth">
+                Life has got all those twists and turns
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="3" id="fifth">
+                Spread love everywhere you go.
+            </td>
+        </tr>
+    </table>
+      <script src="jQuery.js"></script>
+      <script>
+        $(document).ready(function(){
+        var duration = 1200;
+        $(".table2").css("height","200px").css("background-color","pink").css("text-align","center");
+        $("#hide").click(function(){
+            $("#first").hide(duration,function(){
+                $("#second").hide(duration,function(){ 
+                    $("#third").hide(duration,function(){
+                        $("#forth").hide(duration,function(){
+                            $("#fifth").hide(duration);
+                        });
+                    }); 
+                });
+            }); 
+        }); //end hide click
+    $("#show").click(function(){
+            $("#first").show(duration,function(){
+                $("#second").show(duration,function(){ 
+                    $("#third").show(duration,function(){
+                        $("#forth").show(duration,function(){
+                            $("#fifth").show(duration);  
+                        });
+                    });
+                });
+            });
+        }); //end show click
+        $("#toggle").click(function(){
+            $("#first").toggle(duration,function(){
+                $("#second").toggle(duration,function(){ 
+                    $("#third").toggle(duration,function(){
+                        $("#forth").toggle(duration,function(){
+                            $("#fifth").toggle(duration);  
+                        });
+                    });
+                });
+            });
+        }); //end show click
+    }); 
+      </script>
+</body>
+</html>

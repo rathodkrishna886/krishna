@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>will hide and show image (that has heart) tag 10 times (duration 1 second per hide/show)</h1>
+    <table align="center" cellpadding="8" width="40%" border="☻">
+        <tr>
+            <td align="center">
+              <button id="toggle">toggle</button>  
+            </td>
+        </tr>
+    </table>
+    <h1 align="center"> Image of the heart </h1>
+    <div align="center">
+    <img src="heart.jpg" alt="heart" width="500" height="600" id="heart">
+  </div>
+     <script src="jQuery.js"></script> 
+     <script>
+      $(document).ready(function(){
+        var i = 0;
+        var duration = 1000;
+          while (i<10){
+          $("#toggle").click(function(){
+          $("#heart").toggle(duration);
+        });
+        i++;
+      }
+      });
+     </script>
+</body>
+</html>
