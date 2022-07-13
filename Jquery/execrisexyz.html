@@ -1,0 +1,196 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@rathodkrishna886
+theeasylearn /
+frontend3
+Private
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+
+    Insights
+
+frontend3/jquery/dom6.html
+@theeasylearn
+theeasylearn exercise
+Latest commit 9386d0b yesterday
+History
+1 contributor
+152 lines (149 sloc) 4.72 KB
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td 
+        {
+            font-size: 2rem;
+        }
+        .odd 
+        {
+            background-color: aliceblue;
+            color:blue;
+        }
+        .even 
+        {
+            background-color: blue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <table border="2" cellpadding="10" align="center" width="80%">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center">
+                <input type="button" value="Fill value" class="btnfill">
+            </td>
+            <td width="20%" align="center">
+                <input type="button" value="Delete" class="btndelete">
+            </td>
+        </tr>
+    </table>
+    <script src="jquery.js"></script>
+    <script>
+        function RearrangeNumbers()
+        {
+            
+            var rows = $("tr"); //$("tr") return list which has all rows 
+            rows.each(function(index,element){
+                 //console.log(index);
+                 $(element).find("td").eq(0).html(index+1);
+                 $(element).removeClass("odd even");
+            });
+            $("tr:odd").addClass("odd");
+            $("tr:even").addClass("even");
+        }
+        $(document).ready(function(){           
+            //generate & store unique number in first column of each row 
+            RearrangeNumbers();
+
+            $(".btndelete").click(function(){
+                $(this).parent().parent().slideUp(750).remove();
+                var rows = $("tr"); //$("tr") return list which has all rows 
+                RearrangeNumbers();
+            })
+
+            $(".btnfill").click(function(){
+                console.log("function called....");
+                var row = $(this).parent().parent();
+                var SecondColumn = $(row).find("td").eq(1);
+                var ThirdColumn = $(row).find("td").eq(2);
+                $(SecondColumn).html("<h4>India</h4>");
+                $(ThirdColumn).html("<h4>Bharat</h4>");
+            });
+        });
+    </script>
+</body>
+</html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+You have no unread notifications

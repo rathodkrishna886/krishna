@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight
+        {
+            background-color: cyan;
+            color: blue;
+            border: 1px solid blue;
+            padding: 20px;
+            margin: 50px;
+            text-align: center;
+        }
+        .bigtext
+        {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <p align="center">
+      <input type="button" value="apply class" name="btnapply">
+      <input type="button" value="remove class" name="btnremove">
+      <input type="button" value="toggle class" name="btntoggle"> 
+    </p>
+    <br>
+    <br>
+    <br>
+    <p align="center">
+    <span id="title">
+     the easy learn academy
+    </span>
+    </p>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input[name='btnapply']").click(function(){
+                $("#title").addClass("highlight bigtext");
+            });
+            $("input[name='btnremove']").click(function(){
+                $("#title").removeClass("highlight bigtext");
+            });
+            $("input[name='btntoggle']").click(function(){
+                $("#title").toggleClass("highlight bigtext")
+            });
+        });
+    </script>
+</body>
+</html>

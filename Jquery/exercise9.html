@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="tictactoe">
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <p class="restart"><a href="/">Restart Game</a></p>
+        </header>
+        <section>
+            <table>
+                <tr>
+                    <td id="zero"> </td>
+                    <td id="one"> </td>
+                    <td id="two"></td>
+                </tr>
+                <tr>
+                    <td id="three"> </td>
+                    <td id="four"> </td>
+                    <td id="five"></td>
+                </tr>
+                <tr>
+                    <td id="six"> </td>
+                    <td id="seven"> </td>
+                    <td id="eight"></td>
+                </tr>
+                <tr>
+                    <td class="message" colspan="3">You're the Winner</td>
+                </tr>
+                <tr>
+                    <td class="message1" colspan="3">There's a tie</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script src="jquery.js"></script>
+    <script>
+        var TicTacToe = {
+
+            counter: 1,
+
+            init: function (e, obj) {
+                var self = this;
+
+                self.setPlay(e, obj);
+                self.validateTicTacToe();
+
+            },
+            setPlay: function (e, obj) {
+                var self = this,
+                    player1 = 'X', player2 = 'Y',
+                    cell = obj || {};
+
+                if ($(obj).hasClass('player1') || $(obj).hasClass('player2')) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                if (TicTacToe.counter % 2 === 0) {
+                    $(cell).html(player1).addClass('player1 selected');
+                } else {
+                    $(cell).html(player2).addClass('player2 selected');
+                }
+
+                if ($('td').length - 2 == $('td.selected').length) {
+
+                    if ($('.message').is(':hidden')) {
+                        $('.message1').fadeIn('slow');
+                        return false;
+                    }
+
+                }
+
+                TicTacToe.counter++;
+            },
+            validateTicTacToe: function () {
+                var index0 = $('td#zero'),
+                    index1 = $('td#one'),
+                    index2 = $('td#two'),
+                    index3 = $('td#three'),
+                    index4 = $('td#four'),
+                    index5 = $('td#five'),
+                    index6 = $('td#six'),
+                    index7 = $('td#seven'),
+                    index8 = $('td#eight');
+
+                if ($(index0).text() === 'X'
+                    && $(index1).text() === 'X'
+                    && $(index2).text() === 'X' ||
+                    $(index3).text() === 'X'
+                    && $(index4).text() === 'X'
+                    && $(index5).text() === 'X' ||
+                    $(index6).text() === 'X'
+                    && $(index7).text() === 'X'
+                    && $(index8).text() === 'X' ||
+                    $(index0).text() === 'X'
+                    && $(index3).text() === 'X'
+                    && $(index6).text() === 'X' ||
+                    $(index1).text() === 'X'
+                    && $(index4).text() === 'X'
+                    && $(index7).text() === 'X' ||
+                    $(index2).text() === 'X'
+                    && $(index5).text() === 'X'
+                    && $(index8).text() === 'X' ||
+                    $(index0).text() === 'X'
+                    && $(index4).text() === 'X'
+                    && $(index8).text() === 'X' ||
+                    $(index2).text() === 'X'
+                    && $(index4).text() === 'X'
+                    && $(index6).text() === 'X' ||
+                    $(index0).text() === 'Y'
+                    && $(index1).text() === 'Y'
+                    && $(index2).text() === 'Y' ||
+                    $(index3).text() === 'Y'
+                    && $(index4).text() === 'Y'
+                    && $(index5).text() === 'Y' ||
+                    $(index6).text() === 'Y'
+                    && $(index7).text() === 'Y'
+                    && $(index8).text() === 'Y' ||
+                    $(index0).text() === 'Y'
+                    && $(index3).text() === 'Y'
+                    && $(index6).text() === 'Y' ||
+                    $(index1).text() === 'Y'
+                    && $(index4).text() === 'Y'
+                    && $(index7).text() === 'Y' ||
+                    $(index2).text() === 'Y'
+                    && $(index5).text() === 'Y'
+                    && $(index8).text() === 'Y' ||
+                    $(index0).text() === 'Y'
+                    && $(index4).text() === 'Y'
+                    && $(index8).text() === 'Y' ||
+                    $(index2).text() === 'Y'
+                    && $(index4).text() === 'Y'
+                    && $(index6).text() === 'Y') {
+                    $('.message').fadeIn('slow');
+                    $('.message1').hide();
+                    $('table').off('click');
+                }
+            }
+
+        };
+
+        $(function () {
+            $('table').on('click', 'td', function (e) {
+
+                var obj = $(this);
+                TicTacToe.init(e, obj);
+            });
+
+            $('p.restart').on('click', function (e) {
+                e.preventDefault();
+                $('table').find('td.selected').text('');
+                $('table').find('td')
+                    .removeClass('selected')
+                    .removeClass('player1')
+                    .removeClass('player2');
+                $('.message').fadeOut('slow');
+                $('.message1').fadeOut('slow');
+                $('table').on('click', 'td', function (e) {
+                    var obj = $(this);
+                    TicTacToe.init(e, obj);
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

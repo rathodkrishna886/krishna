@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>events in jquery</h1>
+    <table border="2" align="center" cellpadding="10">
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="email" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="Click Me" />
+            </td>
+        </tr>
+    </table>
+    <script src="jquery.js"></script>
+    <script>
+        var Clicked = false
+        $(document).ready(function () {
+            $("input[type!='button']").focus(function () {
+                $(this).css("background-color", "yellow").css("color", "red");
+            })
+            $("input[type!='button']").blur(function ()  /* blur mening if click box the effet of box blur*/ {
+                $(this).css("background-color", "white").css("color", "black");
+            }
+            );
+            $("table").mouseenter(function () {
+                $(this).css("background-color", "cyan");
+            });
+            $("table").mouseleave(function () {
+                $(this).css("background-color", "pink");
+            });
+            $("table").dblclick(function () {
+                if (Clicked == false) {
+                    $(this).css("background-color", "orange")
+                    Clicked = false;
+                }
+                else {
+                    $(this).css("background-color", "pink")
+                    Clicked = true;
+                }
+            })
+        });  
+    </script>
+</body>
+
+</html>

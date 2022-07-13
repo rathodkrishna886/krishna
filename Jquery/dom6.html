@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            font-size: 2rem;
+        }
+
+        .odd {
+            background-color: aliceblue;
+            color: palevioletred;
+        }
+
+        .even {
+            background-color: blue;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2" cellpadding="10" align="center" width="80%">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center"><input type="button" value="fill value" class="btnfill"></td>
+            <td width="20%" align="center"><input type="button" value="delete" class="btndelet"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center"><input type="button" value="fill value" class="btnfill"></td>
+            <td width="20%" align="center"><input type="button" value="delete" class="btndelet"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center"><input type="button" value="fill value" class="btnfill"></td>
+            <td width="20%" align="center"><input type="button" value="delete" class="btndelet"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center"><input type="button" value="fill value" class="btnfill"></td>
+            <td width="20%" align="center"><input type="button" value="delete" class="btndelet"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center"><input type="button" value="fill value" class="btnfill"></td>
+            <td width="20%" align="center"><input type="button" value="delete" class="btndelet"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td width="20%" align="center"><input type="button" value="fill value" class="btnfill"></td>
+            <td width="20%" align="center"><input type="button" value="delete" class="btndelet"></td>
+        </tr>
+    </table>
+    <script src="jquery.js"></script>
+    <script>
+        function Rearrangenumber() {
+            var rows = $("tr");
+            rows.each(function (index, element) {
+                $(element).find("td").eq(0).html(index+1);
+                if ((index+1)%2==0) {
+                    $(element).addclass("odd")
+                }
+                else 
+                {
+                    $(element).addclass("even");
+                }
+
+            });
+        }
+        $(document).ready(function () {
+            Rearrangenumber();
+            $(".btndelet").click(function () {
+                $(this).parent().parent().slideUp(1000).remove();
+                var rows = $("tr");
+                Rearrangenumber();
+            });
+        });
+    </script>
+</body>
+</html>

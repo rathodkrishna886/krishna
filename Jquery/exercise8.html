@@ -11,26 +11,43 @@
      </h1>
      <table cellpadding="4" border="4" width="60%" align="center">
          <tr>
-             <td>
-                 <div></div>
+             <td style="height:250;">
+                 <div id="left"></div>
              </td>
-             <td>
-                 <div>
-
+             <td style="height:250;">
+                 <div id="right">
                  </div>
              </td>
-         </tr>
-     </table>
-     <table cellpadding="4" border="4" width="60%" align="center">
+         </tr
          <tr>
-             <td><textarea name="" id="" cols="30" rows="4"></textarea>
-             <input type="button" value="send msg" id="btnleft" align="right">
+             <td><textarea  id="leftmsg" cols="40" rows="3"></textarea>
+             <input type="button" value="send msg" id="btnleft">
             </td>
-             <td><textarea name="" id="" cols="30" rows="4"></textarea> 
-             <input type="button" value="send msg" id="btnright" align="right">
+             <td><textarea  id="rightmsg" cols="40" rows="3"></textarea> 
+             <input type="button" value="send msg" id="btnright">
             </td>
          </tr>
-        <script src=""></script>
      </table>
+     <script src="jquery.js"></script>
+     <script>
+         $(document).ready(function(){
+         $("#btnleft").click(function(){
+            var message = $("#leftmsg").val();
+            var format_message_right=`<p style="border-bottom:5px; text-align:right;"> ${message} </p>`;
+            var format_message=`<p style="border-bottom:5px;"> ${message} </p>`;
+            console.log(message);
+            $("#right").append(format_message);
+            $("#left").append(format_message_right);
+         });
+         $("#btnright").click(function(){
+            var message = $("#rightmsg").val();
+            var format_message_right=`<p style="border-bottom:5px; text-align:right;"> ${message} </p>`;
+            var format_message=`<p style="border-bottom:5px;"> ${message} </p>`;
+            console.log(message);
+            $("#left").append(format_message);
+            $("#right").append(format_message_right);
+         });
+         });
+     </script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+#tictactoe { width:240px; margin:0 auto; }
+#tictactoe h1,#tictactoe td{text-align:center; vertical-align: middle;}
+#tictactoe{font-family:sans-serif}
+#tictactoe a{color:blue;text-decoration:none}
+#tictactoe table{margin:0 auto;border-collapse:collapse}
+#tictactoe td{width:50px;height:50px;font-size:150%;border:1px solid #000}
+#tictactoe .player1{color:#c71585}
+#tictactoe .player2{color:#4682b4}
+#tictactoe .message, #tictactoe .message1{background-color:teal;height:50px;color:#fff;display:none}
+#tictactoe .restart{width:240px;text-align:center;margin:0 auto}
+
+
