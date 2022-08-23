@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form 
+        {
+            background-color: aliceblue;
+            padding:10px;
+        }
+        input 
+        {
+            margin-bottom: 10px;
+            margin-left: 10px;
+            border:solid black 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>input tag in html 5</h1>
+    <form novalidate action="success.html" method="post" autocomplete="on" enctype="multipart/form-data">
+        Email <input type="email" placeholder="email address" autocomplete="off"required> <br>
+        Password <input type="password" placeholder="password" autocomplete="off"required> <br>
+        birthdate <input type="date" required min="1900-01-01" max="2022-08-06"> <br>
+        birthtime <input type="time" required> <br>
+        weight <input type="number" placeholder="weight" required min="1" max="150"> <br>
+        favourite color <input type="color" required> <br>
+        height <input type="range" required min="1" max="8"> <br>
+        aadhar card number <input type="text" pattern="[0-9]{12}" required>
+        select photo <input type="file" multiple accept="image/*"> <br>
+        select resume (<1MB)
+        <input id="resume" type="file" accept="application/pdf"> <br>
+        <input type="submit" value="submit as student"> <br>
+        <input type="submit" value="submit as teacher" formaction="success2.html">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script>
+        //get size of the file and ensure it is less then 2mb
+        $('#resume').bind('change', function() {
+            //this.files[0].size gets the size of your file.
+            var size = parseInt(parseInt(this.files[0].size)/1024);
+            if(size>1024)
+            {
+                alert("You have selected file whose size is > 1MB limit");
+                $('#resume').val(''); //remove selected file
+            }
+        });
+    </script>
+</script>
+</body>
+</html>
