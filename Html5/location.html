@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>get user location using HTML 5 gellocation API</h1> <hr>
+    <h2 id="mylocation">here location will be displayed</h2>
+    <input type="button" onclick="getLocation();" value="Get Current Location">  
+
+    <script>
+        function getLocation()
+        {
+            // alert("button clicked...");
+            
+            navigator.geolocation.getCurrentPosition(showMyLocation);
+        }
+        function showMyLocation(location)
+        {
+            var mylocation = document.getElementById("mylocation");
+            //alert(location.coords.latitude+ " " + location.coords.longitude + " " + location.coords.accuracy);
+            var message = "latitude " + location.coords.latitude+ " longitude " + location.coords.longitude + " accuracy " + location.coords.accuracy
+            mylocation.innerHTML = message;
+        }
+    </script>
+</body>
+</html>

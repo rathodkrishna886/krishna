@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM related methods</title>
+</head>
+<body>
+    <table align="center" width="80%" border="2" cellpadding="10">
+        <tr>
+            <td>
+                <b>Comments</b> <br>
+                <!-- input tag -->
+                <textarea id="new_comment" cols="120" rows="10"></textarea>
+            </td>
+            <td>
+                <label for="append">
+                    <input type="radio" name="rdoplace" id="append" value="1" /> Append <br>
+
+                </label>
+                <label for="prepend">
+                    <input type="radio" name="rdoplace" id="prepend" value="2" /> Prepand <br>
+
+                </label>
+                <label for="before">
+                    <input type="radio" name="rdoplace" id="before" value="3" /> Before <br>
+
+                </label>
+                <label for="after">
+                    <input type="radio" name="rdoplace" id="after" value="4" /> After <br>
+
+                </label>
+                <input type="button" value="Add Comments" id="btnadd" />
+                <input type="button" value="delete all comments" id="btndelete" />
+            </td>
+        </tr>
+    </table>
+    <h2>Existing Comments</h2>
+    <div id="comments">
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").css("border","2px solid red").css("margin","10px").css("padding",'10px').css("background-color","yellow");
+            $("#btnadd").click(function(){
+                // console.log("Button click....");
+                var NewComment = "<p>" + $("#new_comment").val() + "</p>"; //return text from textarea
+                var SelectedRadioButtonId = $("input[name='rdoplace']:checked").attr("id");
+                console.log(SelectedRadioButtonId);
+                if(SelectedRadioButtonId=="append")
+                {
+                    $("#comments").append(NewComment);
+                }
+                else if(SelectedRadioButtonId=="prepend")
+                {
+                    $("#comments").prepend(NewComment);
+                }
+                else if(SelectedRadioButtonId=="before")
+                {
+                    $("#comments").before(NewComment);
+                }
+                else if(SelectedRadioButtonId=="after")
+                {
+                    $("#comments").after(NewComment);
+                }
+                $("p").css("border","2px solid gray").css("margin","10px").css("padding",'10px');
+            });
+
+            $("#btndelete").click(function(){
+                $("p").slideUp("slow",function(){
+                    $("#comments").html("");
+                });
+            }); 
+        });
+    </script>
+</body>
+</html>

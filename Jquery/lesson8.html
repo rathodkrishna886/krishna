@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jquery Hide and show effect</h1>
+    <table align="center" cellpadding="10" width="80%" border="2" >
+        <tr>
+            <td align=center>
+                <button id="hide">Hide</button>
+            </td>
+            <td align=center>
+                <button id="show">Show</button>
+            </td>
+            <td align=center>
+                <button id="toggle">Toggle</button>
+            </td>
+        </tr>
+    </table>
+    <div id="first">
+        <h1>First</h1>
+    </div>
+    <div id="second">
+        <h1>second</h1>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            var duration = 1000; //1 second
+            $("div").css("height","200px").css("background-color","yellow").css("text-align","center");
+
+            //handle event
+            $("#hide").click(function(){
+                $("#first").hide(duration,function(){
+                    $("#second").hide(duration);
+                });
+            }); //end of hide click
+
+            $("#show").click(function(){
+                $("#first").show(duration,function(){
+                    $("#second").show(duration);
+                });
+                
+            }); //end of show click
+
+            $("#toggle").click(function(){
+                $("#first").toggle(duration,function(){
+                    $("#second").toggle(duration);
+                });
+            }); //end of toggle click
+        });
+    </script>
+</body>
+</html>

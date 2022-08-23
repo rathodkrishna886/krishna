@@ -5,63 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .gallary {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        figure 
+        {
+            background-color: aliceblue;
+            padding:5px;
+            border:1px solid black;
+            box-shadow: 5px 5px 5px gray;
+        }
+        figcaption
+        {
+            text-align: center;
+            font-size: xx-large;
+        }
+        details 
+        {
+            background-color: gainsboro;
+            margin-bottom: 10px;
+            padding:5px;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        summary
+        {
+            font-size: xx-large;
+            text-transform: uppercase;
+        }
+        time 
+        {
+            font-weight: bold;
+            color:black;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-    <h1> Example of html 5 tags </h1>
+    <h1>example of html 5 tags</h1>
     <h3>details</h3>
-      <details>
-        <summary>
-            click to flod or unflod
-        </summary>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis nostrum commodi quisquam sapiente neque iusto in quod facere omnis dicta, modi dolores harum quis pariatur. Facere optio provident nobis.</p>
-      </details>
-      <details>
-        <summary>
-            click to flod or unflod
-        </summary>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis nostrum commodi quisquam sapiente neque iusto in quod facere omnis dicta, modi dolores harum quis pariatur. Facere optio provident nobis.</p>
-      </details>
-      <h3>datalist example </h3>
-      <input type="text" list="city" placeholder="enter city"> <br>
-      <datalist id="city">
+    <details>
+        <summary>click to fold unfold</summary>
+        <p>I have class at <time datetime="2022-12-22 08:00"> 25-12-2022 08:00 AM</time> Officiis ab minus libero autem, architecto assumenda, quam consequatur pariatur vel reprehenderit magnam error magni veniam aperiam. Nostrum repellendus error ab quam repellat animi voluptate numquam, suscipit consequatur eos sunt id voluptatem quod recusandae in eum? Excepturi repellendus eos ipsa reiciendis perspiciatis nam ipsam rerum cumque a, aliquam mollitia animi delectus! Exercitationem expedita nulla nam neque voluptatum pariatur iste nihil perspiciatis, similique earum officiis magnam illum necessitatibus quasi quaerat consequuntur, voluptates aperiam quod adipisci cumque quae autem quas. Nemo natus dignissimos obcaecati, ipsam hic assumenda amet exercitationem, nihil magni itaque nostrum dolores.</p>
+    </details>
+    <details>
+        <summary>click to fold unfold</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ab minus libero autem, architecto assumenda, quam consequatur pariatur vel reprehenderit magnam error magni veniam aperiam. Nostrum repellendus error ab quam repellat animi voluptate numquam, suscipit consequatur eos sunt id voluptatem quod recusandae in eum? Excepturi repellendus eos ipsa reiciendis perspiciatis nam ipsam rerum cumque a, aliquam mollitia animi delectus! Exercitationem expedita nulla nam neque voluptatum pariatur iste nihil perspiciatis, similique earum officiis magnam illum necessitatibus quasi quaerat consequuntur, voluptates aperiam quod adipisci cumque quae autem quas. Nemo natus dignissimos obcaecati, ipsam hic assumenda amet exercitationem, nihil magni itaque nostrum dolores.</p>
+    </details>
+    <details>
+        <summary>click to fold unfold</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ab minus libero autem, architecto assumenda, quam consequatur pariatur vel reprehenderit magnam error magni veniam aperiam. Nostrum repellendus error ab quam repellat animi voluptate numquam, suscipit consequatur eos sunt id voluptatem quod recusandae in eum? Excepturi repellendus eos ipsa reiciendis perspiciatis nam ipsam rerum cumque a, aliquam mollitia animi delectus! Exercitationem expedita nulla nam neque voluptatum pariatur iste nihil perspiciatis, similique earum officiis magnam illum necessitatibus quasi quaerat consequuntur, voluptates aperiam quod adipisci cumque quae autem quas. Nemo natus dignissimos obcaecati, ipsam hic assumenda amet exercitationem, nihil magni itaque nostrum dolores.</p>
+    </details>
+    <h3>Datalist example</h3>
+    <input type="text" list="city" placeholder="enter city"> <br>
+    <datalist id="city">
         <option value="baroda">
-        <option value="ahmdabad">
         <option value="bhavnagar">
         <option value="surendranagar">
-        <option value="surat">
-        </datalist>
-        <div>
-            <h3>mark tag</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, eius hic, quia quasi fuga voluptatibus distinctio suscipit blanditiis quisquam, ipsa adipisci dolore nam optio laboriosam unde? Quas iste tempore officia.
-                </p>
-            </div>
-                <div class="gallary">
-                    <figure>
-                        <img src="https://www.picsum.photos/301" alt="">
-                        <figcaption> nature</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://www.picsum.photos/301" alt="">
-                        <figcaption> nature</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://www.picsum.photos/301" alt="">
-                        <figcaption> nature</figcaption>
-                    </figure>
-                </div>
-                <h3>audio</h3>
-                <audio controls>
-                    <source>
-                </audio><audio controls>
-                    <source src="audio/one.mp3" type="audio/mpeg" />
-                    <source src="audio/one.wav" type="audio/wav" />
-                    <embed src="audio/one.mp3" type="application/x-mplayer2" autostart="true">
-                </audio>
-                <h3>video</h3>
-                <video height="320" width="480" controls>
-                    <source src="video/earth.mp4" type="video/mp4" />
-                    <embed src="video/earth.mp4" type="application/x-mplayer2" />
-                </video>
+        <option value="sorath">
+        <option value="somnath">
+    </datalist>
+    <div>
+        <h3>mark tag</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, deserunt itaque. Voluptas ipsum architecto aut asperiores consectetur <mark>exercitationem sed aperiam veniam voluptates quisquam. Eligendi temporibus sed iste nulla molestias corporis tempore nemo autem soluta,</mark> dolore debitis obcaecati quaerat. Aliquid illo mollitia quis id in voluptates! Repellendus atque repudiandae quasi possimus dolores ea error in sint unde sit nulla ut corporis libero ipsa iste perspiciatis cum, eaque adipisci totam, neque asperiores? Minus voluptates soluta dignissimos dolor hic cumque quisquam tenetur, itaque sequi? Fugiat culpa nesciunt quam, quas optio praesentium, accusantium eaque tempora impedit voluptatibus mollitia vel qui commodi quos sit obcaecati.</p>
+    </div>
+    <div class="gallary">
+        <figure>
+            <img src="https://www.picsum.photos/300" alt="">
+            <figcaption>Sachin</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.picsum.photos/300" alt="">
+            <figcaption>Dravid</figcaption>
+        </figure>
+        <figure>
+            <img src="https://www.picsum.photos/300" alt="">
+            <figcaption>Sehwag</figcaption>
+        </figure>
+    </div>
+    <h3>audio</h3>
+    <audio controls>
+        <source src="audio/one.mp3" type="audio/mpeg" />
+        <source src="audio/one.wav" type="audio/wav" />
+        <embed src="audio/one.mp3" type="application/x-mplayer2" autostart="true">
+    </audio>
+    <h3>video</h3>
+    <video height="320" width="480" controls>
+        <source src="video/earth.mp4" type="video/mp4" />
+        <embed src="video/earth.mp4" type="application/x-mplayer2" />
+    </video>
+
 </body>
 </html>

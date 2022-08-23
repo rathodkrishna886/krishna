@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM related methods</title>
+</head>
+<body>
+    <table align="center" width="80%" border="2" cellpadding="10">
+        <tr>
+            <td>
+                <b>Comments</b> <br>
+                <!-- input tag -->
+                <textarea id="new_comment" cols="120" rows="10"></textarea>
+            </td>
+            <td>
+                <input type="button" value="Add Comments" id="btnadd" />
+                <input type="button" value="delete all comments" id="btndelete" />
+            </td>
+        </tr>
+    </table>
+    <h2>Existing Comments</h2>
+    <div id="comments">
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnadd").click(function(){
+                // console.log("Button click....");
+                var NewComment = $("#new_comment").val(); //return text from textarea
+                // console.log(NewComment);
+                NewComment = "<p>" + NewComment + "</p>";
+                var ExistingComments = $("#comments").html();
+                $("#comments").html(NewComment + ExistingComments);
+                $("p").css("border","2px solid gray").css("margin","10px").css("padding",'10px');
+            });
+
+            $("#btndelete").click(function(){
+                $("p").slideUp("slow",function(){
+                    $("#comments").html("");
+                });
+            }); 
+        });
+    </script>
+</body>
+</html>

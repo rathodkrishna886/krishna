@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example of FadeIn FadeOut FadeToggle FadeTo</h1>
+    <hr>
+    <table border="1" align="center" width="100%">
+        <tr>
+            <td>
+                <input type="button" value="fade in " id="fadein">
+            </td>
+            <td>
+                <input type="button" value="fade out" id="fadeout">
+            </td>
+            <td>
+                <input type="button" value="fade toggle" id="fadetoggle">
+            </td>
+            <td>
+                <input type="button" value="fade to" id="fadeto">
+            </td>
+        </tr>
+    </table>
+    <div class="first">
+        <h2>first div</h2>
+    </div>
+    <div class="second">
+        <h2>second div</h2>
+    </div>
+    <div class="third">
+        <h2>third div</h2>
+    </div>
+    <div class="fourth">
+        <h2>fourth</h2>
+    </div>
+<script src="jquery.js"></script>
+<script>
+    var duration = 3000;    
+    $(document).ready(function(){
+        //this function always run after whole document is loaded 
+
+        //apply formating div 
+        $("div").css("height","100px");
+        $("div").css("border","2px solid black");
+        $("div").css("background-color","yellow");
+        $("div").css("text-align","center");
+
+        //handle event 
+        $("#fadein").click(function(){
+            $(".first").fadeIn();
+            $(".second").fadeIn("slow");
+            $(".third").fadeIn(duration);
+            $(".fourth").fadeIn(duration,function(){
+                $(".fourth").fadeOut();
+            });
+        });
+
+        $("#fadeout").click(function(){
+            
+            $(".first").fadeOut();
+            $(".second").fadeOut("slow");
+            $(".third").fadeOut(duration);
+            $(".fourth").fadeOut(duration,function(){
+                $(".fourth").fadeIn();
+            });
+        });
+
+        $("#fadetoggle").click(function(){
+            $(".first").fadeToggle();
+            $(".second").fadeToggle("slow");
+            $(".third").fadeToggle(duration);
+            $(".fourth").fadeToggle(duration,function(){
+                $(".fourth").fadeToggle();
+            });
+        });
+        $("#fadeto").click(function(){
+            $(".first").fadeTo(1000,.75);
+            $(".second").fadeTo(1000,.50);
+            $(".third").fadeTo(1000,.25);
+            $(".fourth").fadeTo(1000,.15);
+        });
+    });
+</script>
+</body>
+</html>
