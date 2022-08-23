@@ -1,0 +1,199 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .products {
+    display: grid;
+    margin-top: 70px;
+  }
+  .item {
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 5px gray;
+  }
+  .item > div {
+    text-align: center;
+  }
+  button {
+    width: 100%;
+    background-color: cadetblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  /* ##Device = Desktops ##Screen = 1281px to higher resolution desktop */
+  @media (min-width: 1281px) {
+    /* code in this block will be applied only if device width>1281 */
+    .products {
+      grid-template-columns: repeat(4,25%);
+    }
+  }
+  
+  /* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    /* code in this block will be applied only if device width>1025 and <1280 */
+    .products {
+      grid-template-columns: repeat(3, 33.33%);
+    }
+  }
+  
+  /* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* code in this block will be applied only if device width>768 and <1024 */
+    .products {
+      grid-template-columns: repeat(2, 50%);
+    }
+  }
+  /*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+  @media (min-width: 320px) and (max-width: 767px) {
+    /* code in this block will be applied only if device width>320 and <480 */
+    .products {
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+  
+  body {
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+      background-color: #f4f4f4;
+    }
+    
+    a {
+      color: #000;
+    }
+  
+    /* navigation */
+    
+    .navigation {
+      background-color: #fff;
+      box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+      position: fixed;
+      top: 0px;
+      width: 100%;
+    }
+    
+    .navigation>ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    
+    .navigation li a {
+      display: block;
+      padding: 20px 20px;
+      border-right: 1px solid #f4f4f4;
+      text-decoration: none;
+    }
+    
+    .navigation>li>a:hover,
+    .navigation .menu-btn:hover {
+      background-color: #f4f4f4;
+    }
+    
+    .navigation .logo {
+      display: block;
+      float: left;
+      font-size: 2em;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+    
+    /* menu */
+    
+    .navigation .menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+    }
+    
+    /* menu icon */
+    
+    .navigation .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 28px 20px;
+      position: relative;
+      user-select: none;
+    }
+    
+    .navigation .menu-icon .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+    }
+    
+    .navigation .menu-icon .navicon:before,
+    .navigation .menu-icon .navicon:after {
+      background: #333;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+    }
+    
+    .navigation .menu-icon .navicon:before {
+      top: 5px;
+    }
+    
+    .navigation .menu-icon .navicon:after {
+      top: -5px;
+    }
+    
+    /* menu btn */
+    
+    .navigation .menu-btn {
+      display: none;
+    }
+    
+    .navigation .menu-btn:checked ~ .menu {
+      max-height: 240px;
+    }
+    
+    .navigation .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+    
+    .navigation .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+    
+    .navigation .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+    
+    .navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+    
+    /* 48em = 768px */
+    
+    @media (min-width: 48em) {
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        padding: 20px 30px;
+      }
+      .navigation .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      .navigation .menu-icon {
+        display: none;
+      }
+    }

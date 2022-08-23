@@ -1,0 +1,32 @@
+* 
+{
+    margin: 0px;
+    padding:0px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+body 
+{
+    background-color: antiquewhite;
+}
+.products
+{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+.item 
+{
+    border: 1px solid black;
+    padding:10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 5px gray;
+}
+button
+{
+    width:100%;
+    background-color: cadetblue;
+    color:white;
+    text-align: center;
+    padding:10px;
+}

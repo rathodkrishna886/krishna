@@ -1,0 +1,29 @@
+* 
+{
+    margin: 0px;
+    padding:0px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+body 
+{
+    background-color: antiquewhite;
+}
+html,body
+{
+    min-height: 100vh;
+}
+.container 
+{
+    padding:10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 8fr 6fr 3fr;
+    grid-auto-rows: 1fr;
+    min-height: 100vh;
+}
+.container>div 
+{
+    border: 1px solid black;
+    padding: 5px;
+}
