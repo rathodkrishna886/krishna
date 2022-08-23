@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>filter method of array in javascript</h1>
+    <p>
+        <table id="odd" border="1" align="center" cellpadding="10">
+
+        </table>
+    </p>
+    <p>
+        <table id="even" border="1" align="center" cellpadding="10">
+
+        </table>
+    </p>
+<script src="script.js"></script>
+<script>
+    function IsEven(number)
+    {
+        if(number%2==0)
+            return true;
+        else 
+            return false;
+    }
+    function isOdd(number)
+    {
+        if(number%2!=0)
+            return true;
+        else 
+            return false;
+    }
+    //creating array 
+    var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    log("size of array = " + numbers.length);
+    let evens = numbers.filter(IsEven);
+    let odds = numbers.filter(isOdd);
+    log(evens);
+    log(odds);
+    let temp = evens.map(function(SingleNumber){
+        $("even").innerHTML += `<tr><td>${SingleNumber}</td></tr>`;
+    });
+
+    let temp2 = odds.map(function(SingleNumber){
+        $("odd").innerHTML += `<tr><td>${SingleNumber}</td></tr>`;
+    });
+</script>
+</body>
+</html>

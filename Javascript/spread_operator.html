@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>example of spread operator</h1>
+    <hr>
+    <p>use console to see output</p>
+    <script src="script.js"></script>
+    <script>
+        let book = {
+            name : 'The secret',
+            price : 400,
+            pages : 200
+        };
+
+        let author = {
+            authorname : 'krishna patel',
+            name : 'The secret of success',
+            birthdate : '01/01/1990',
+            gender : false
+        };
+
+        log(book);
+        log(author);
+        let UpdatedObject = {...book, ...author};
+        log(UpdatedObject);
+    </script>
+</body>
+</html>

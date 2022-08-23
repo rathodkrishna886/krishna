@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body> 
+    <h1>Example of hierarchical inheritance</h1>
+    <hr />
+    <script src="script.js"></script>
+    <script>
+        class shape
+        {
+            getPI()
+            {
+                return 3.14;
+            }
+            getSquare(number)
+            {
+                return number * number;
+            }
+        }
+        class circle extends shape{
+            constructor(radius)
+            {
+                super(); //calling parent's class constructor (required)
+                this.radius = parseFloat(radius);
+            }
+            getArea()
+            {
+                //formula to calculate area of circle is pi * radius * radius;
+                var area =  super.getPI() * super.getSquare(this.radius);
+                return area;
+            }
+        }
+        class cyliender extends shape
+        {
+            constructor(radius,height)
+            {
+                super(); //calling parent's class constructor (required)
+                this.radius = parseFloat(radius);
+                this.height = parseFloat(height);
+            }
+            getArea()
+            {
+                var area =  (2 * super.getPI() * this.radius * this.height) +  (2 * super.getPI() * super.getSquare(this.radius));
+                return area;
+            }
+        }
+
+        var c1 = new circle(100);
+        var area = c1.getArea(); //return area of circle
+        log("circle area = " + area);
+
+        var c2 = new cyliender(100,50);
+        area = c2.getArea(); //return area of cyliender
+        log("cyliender area = " + area);
+        
+    </script>
+  </body>
+</html>

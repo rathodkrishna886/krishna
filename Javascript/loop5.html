@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>for loop</h1>
+    <h4>findout whether number is perfect number or not</h4>
+    <form action="">
+      <input type="number" id="number" placeholder="enter number" /> <br />
+      <input
+        type="button"
+        value="findout number is perfect number or not"
+        onclick="findperfect();"
+      />
+    </form>
+    <h2 id="sum"></h2>
+    <h2 id="perfect"></h2>
+
+    <script src="script.js"></script>
+    <script>
+      var findperfect = function () {
+        var number = int($("number").value); //6
+        for(var divisor=1,sum=0,reminder=0;divisor<number;divisor++)
+        {
+          reminder = number % divisor;
+          if (reminder == 0)
+            //positive factor
+            sum = sum + divisor; //1
+        }
+        $("sum").innerHTML = "sum = " + sum;
+        if(sum==number)
+            $("perfect").innerHTML = "number is perfect number";
+        else 
+            $("perfect").innerHTML = "number is not perfect number";
+      };
+    </script>
+  </body>
+</html>

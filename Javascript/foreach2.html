@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>example of foreach loop</h1>
+    <table
+      id="student"
+      border="1"
+      align="center"
+      width="50%"
+      cellpadding="10"
+    ></table>
+
+    <script src="script.js"></script>
+    <script>
+      //create object
+      class student {
+        constructor(name, dob, mobile, email) {
+          this.name = name;
+          this.dob = dob;
+          this.mobile = mobile;
+          this.email = email;
+        }
+      }
+      //create object-variable
+      var s1 = new student(
+        "abhay gohil",
+        "12-05-2000",
+        9662512857,
+        "abhay@gmail.com"
+      );
+      var s2 = new student(
+        "ram gohil",
+        "22-05-2000",
+        123467890,
+        "ram@gmail.com"
+      );
+      var s3 = new student(
+        "krish gohil",
+        "05-05-2000",
+        9876543210,
+        "krish@gmail.com"
+      );
+
+      //create array of object variable
+      var students = [s1, s2, s3];
+      for (let index = 0; index < students.length; index++) {
+        const element = students[index];
+        log(element);
+        var html = '<tr>';
+            for(var key in element){
+                html+= `<td>${element[key]}</td>`;
+            }
+        html += '</tr>';
+        log(html);
+        $("student").innerHTML += html;
+      }
+    </script>
+  </body>
+</html>

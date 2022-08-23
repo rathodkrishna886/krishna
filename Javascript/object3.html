@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2nd method of creating object</h1>
+    <p>use console to see outout</p>
+
+    <script src="script.js"></script>
+    <script>
+        //creating object using second method 
+        //syntax 
+        // const  object-name = new Object({
+        //     variable - declration 
+        //     methods 
+        // });
+
+        const course = new Object({
+            //variables 
+            name : "Javascript",
+            duration : 45,
+            fees: 4999.25,
+            isCertified : true,
+
+            //functions 
+            display: function(){
+                // log(name); //it wont work becasue of javascript interpret that name is local variable
+                log("name " + this.name);
+                log("duration " + this.duration);
+                log("fees " + this.fees);
+                if(this.isCertified ==  true)
+                {
+                    log("this is Certified course");
+                }
+                else 
+                {
+                    log("this is not Certified course");
+                }
+            }
+        }); //end of object
+
+        //object-name.method-name();
+        course.display(); //this is how we call method of object
+
+        //acess variable using object name
+        log("name " + course.name); //1st method
+        log("duration " + course['duration']); //2nd method
+    </script>
+</body>
+</html>

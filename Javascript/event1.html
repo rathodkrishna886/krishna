@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="button" value="first button" id="first" onclick="ButtonClicked(this.id,event,value);">
+    <input type="button" value="second button" id="second" onclick="ButtonClicked(this.id,event,value);">
+    <script>
+        function ButtonClicked(buttonid,event,value)
+        {
+            alert(buttonid);
+            alert(event.type);
+            alert(value);
+        }
+    </script>
+</body>
+</html>

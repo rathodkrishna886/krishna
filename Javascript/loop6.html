@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>do while loop</h1>
+    <h4>findout whether number is armstrong number or not</h4>
+    <form>
+      <input type="number" id="number" placeholder="enter number" /> <br />
+      <input
+        type="button"
+        value="findout number is armstrong number or not"
+        onclick="findarmstrong();"
+      />
+    </form>
+    <h2 id="sum"></h2>
+    <h2 id="armstrong"></h2>
+
+    <script src="script.js"></script>
+    <script>
+      let findarmstrong = function () {
+        var number = parseInt($("number").value); //153
+        //getLentgh is user defined function
+        var length = getLength(number);
+        var reminder,power,total = 0;
+        var original = number; //153
+        do
+        {
+            reminder = number % 10; //5
+            power = Math.pow(reminder, length);
+            total = total + power; //27 + 125  +1 = 153
+            number = parseInt(String(number / 10)); //0
+        }while(number>0);
+        if(total==original)
+        {
+            $("armstrong").innerHTML = "this is an armstrong number";
+        }
+        else 
+        {
+            $("armstrong").innerHTML = "this is not an armstrong number";
+        }
+      };
+    </script>
+  </body>
+</html>

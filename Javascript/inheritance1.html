@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example of single level inheritance</h1>
+    <hr>
+    <script src="script.js"></script>
+    <script>
+        //create parent class
+        class person{
+            constructor(name){
+                log("person class constructor called...");
+                this.name = name;
+            }
+            //methods 
+            walk(){
+                log(`${this.name} can walk`);
+            }
+            talk(){
+                log(`${this.name} can talk`);
+            }
+            sleep(){
+                log(`${this.name} can sleep`);
+            }
+        }
+        //create child class 
+        class teacher extends person{
+            //if parent class has contructor with argument then we must create constructor in child class 
+            constructor(name,subject,experience){
+                super(name); //we must call parent class constructor using super from child class constructor at begining
+                this.subject = subject;
+                this.experience = experience;
+                log("teacher class constructor called...");
+            }
+            work()
+            {
+                //we can access/change parent class properties from child class methods
+                log(`${this.name} has been teaching ${this.subject} since ${this.experience} years`);
+            }
+            WhatICanDo(){
+                //calling parent class method 
+                super.walk(); 
+                super.talk();
+                super.sleep();
+
+                //calling own class methods
+                this.work();
+            }
+        }
+
+        //create object variable
+        var name = "Ankit Patel";
+        var subject = "Javascript";
+        var experience = 13;
+        var t1 = new teacher(name,subject,experience);
+        t1.WhatICanDo();
+        t1.walk(); //calling parent class method using child class object variable
+    </script>
+</body>
+</html>

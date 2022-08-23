@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    select start value <br>
+    <select name="start" id="start">
+        <option value="">select number</option>
+    </select> <br>
+    select end value <br>
+    <select name="stop" id="stop">
+        <option value="">select number</option>
+    </select>
+<script src="script.js"></script>
+<script>
+    var html = '';
+    for (let index = 1; index <= 100; index++) {
+        //log(html);
+        html += `<option>${index}</option>`
+    }
+    $("start").innerHTML += html;
+    $("stop").innerHTML += html;
+</script>
+</body>
+</html>

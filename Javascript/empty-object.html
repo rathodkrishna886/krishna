@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>empty object</h1>
+    <p>use console to see output</p>
+    <script src="script.js"></script>
+    <script>
+        //creating empty object 
+        //let object-variable-name = new Object()
+        let student = new Object();
+        log("printing empty object.....")
+        log(student);
+        //adding properties into empty object 
+        //1st technique to add properties
+        student.name = "jiya patel";
+        student.age = 10;
+        student.gender = "female";
+        //2nd technique to add properties
+        student["weight"] = 20.25;
+        log("Printing object with its all properties");
+        log(student);
+
+        //2nd technique to create empty object
+        let course = {};
+        log("printing empty object.....")
+        log(course);
+        course.name = "frontend";
+        course.duration = 45;
+        log(course);
+        if("name" in course)
+        {
+            log("name exist in course");
+        }
+        else 
+        {
+            log("name does exist in course");
+        }
+        
+        if("fees" in course)
+        {
+            log("fees exist in course");
+        }
+        else 
+        {
+            log("fees does exist in course");
+        }
+    </script>
+</body>
+</html>

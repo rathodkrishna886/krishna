@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    select source <br>
+    <select name="source" id="source">
+        <option value="">select source</option>
+    </select> <br>
+    select destination <br>
+    <select name="destination" id="destination">
+        <option value="">select destination</option>
+    </select>
+<script src="script.js"></script>
+<script>
+    var cities = ['ahmedabad','bhavnagar','rajkot','surendranagar','vadodara','gandhinagar','surat','junagadh'];
+    var html = '';
+    for (let index = 0; index < cities.length; index++) 
+    {
+        html += `<option>${cities[index]}</option>`
+    }
+    $("source").innerHTML += html;
+    $("destination").innerHTML += html;
+</script>
+</body>
+</html>

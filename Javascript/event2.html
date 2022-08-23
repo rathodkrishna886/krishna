@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="button" value="second button" id="first">
+    <script>
+        let first = document.querySelector("#first");
+        first.onclick = function(){
+            alert(this.id + " " + this.value);
+            first.onclick = null; //used to remove event handler if required
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>example of foreach loop</h1>
+    <table id="student" border="1" align="center" width="50%" cellpadding="10"></table>
+
+<script src="script.js"></script>
+<script>
+    //create object 
+    class student {
+        constructor(name,dob,mobile,email){
+            this.name = name;
+            this.dob = dob;
+            this.mobile = mobile;
+            this.email = email;
+        }
+    }
+    //create object-variable 
+    var s1 = new student('abhay gohil','12-05-2000',9662512857,'abhay@gmail.com');
+    log(s1);
+    var html = '<tr>';
+        for(var key in s1){
+            html+= `<td>${s1[key]}</td>`;
+        }
+    html += '</tr>';
+    log(html);
+    $("student").innerHTML = html;
+    </script>
+</body>
+</html>

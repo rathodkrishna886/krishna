@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>es6 way to create object (4th way)</h1>
+    <h2>Area Calculator</h2>
+    <form>
+        <table border="1" align="center" cellpadding="10">
+            <tr>
+                <td>enter length</td>
+                <td>
+                    <input type="number" name="length" id="length">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    enter width
+                </td>
+                <td>
+                    <input type="number" name="width" id="width">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" name="btnarea" id="btnarea" value="Calculate Area" 
+                    onclick="calculate_area();">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" id="output">
+
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        //create class (ES6  way)
+        class shape 
+        {
+            //constructor function is called automatically when we create object-variable
+            constructor(length,width)
+            {
+                this.length = length; 
+                this.width = width; 
+                log("constructor function called automatically.....");
+            }
+            getArea()
+            {
+                log("getArea() function is called....");
+                let area =  this.length * this.width;
+                return area;
+            }
+            display()
+            {
+                log("height = " + this.length + " width=" + this.width);
+            }
+        }
+        let calculate_area = function()
+        {
+             //normal variable
+            let length = $("length").value;
+            let width = $("width").value;
+
+            //create object-variable of shape type
+            //syntax es6 way
+            // const object-variable = new class(arguments.....)
+            const rectangle = new shape(length,width); //it will constructor automatically
+            let area = rectangle.getArea();
+            rectangle.display();
+            $("output").innerHTML = `<h2>area = ${area}</h2>`;
+        }
+    </script>
+</body>
+</html>

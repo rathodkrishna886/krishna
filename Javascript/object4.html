@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3rd method of creating object</h1>
+    <p>use console to see outout</p>
+
+    <script src="script.js"></script>
+    <script>
+        //creating object using 3rd method 
+        //syntax 
+        // function ObjectName()
+        // {
+        //     //variable declration 
+        //     this.variable-name = value;
+        //     this.variable-name2 = value;
+        //     this.function-name(){
+        //         statements
+        //     }
+        // }
+        //creating object
+        function Animal(){
+            this.name = '';
+            this.weight = 0.0;
+            this.year_to_live = 0;
+            this.display = function ()
+            {
+                log("name " + this.name);
+                log("weight " + this.weight);
+                log("years  " + this.year_to_live);
+            }
+        }
+        //creating object-variable
+        lion = new Animal();
+        hourse = new Animal();
+
+        lion.name = "asiatic Lion";
+        lion.weight = 150;
+        lion.year_to_live = 15;
+        lion.food = "any animal"; //creating new variable inside object-variable
+    
+        hourse.name = "Turkey Hourse";
+        hourse.weight = 200;
+        hourse.year_to_live = 25;
+
+        lion.display();
+        hourse.display();
+
+        log(lion.name + " " + lion.weight + " " + lion.year_to_live);
+        
+        //check whether variable exist or not inside object-variable
+        if(lion.food != undefined)
+            log(lion.food)
+        else 
+            log("food does not exists in lion ");
+        
+            log(hourse.name + " " + hourse.weight + " " + hourse.year_to_live);
+        
+        //check whether variable exist or not inside object-variable
+        if(hourse.food == undefined)
+            log("food does not exists in hourse ");
+        else 
+            log(hourse.food)
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Cloning in javascript</h1>
+    <hr>
+    <p>use console to see output</p>
+
+<script src="script.js"></script>
+<script>
+    class course
+    {
+        constructor(name,duration,fees)
+        {
+            log("constructor called....")
+            //properties
+            this.name = name;
+            this.duration = duration;
+            this.fees = fees;
+        }
+        display()
+        {
+            log("Name =" + this.name);
+            log("duration =" + this.duration);
+            log("fees =" + this.fees);
+        }
+    }
+
+    //object variable 
+    var react = new course("React JS","120 days",12000);
+    log(react);
+    let php = react; //it assign reference of react to php so if we change php or react object same changes will be applied to both 
+    php.fees = 15000;
+    react.duration = "130 days";
+    log("displaying react object....");
+    log(react);
+    log("displaying php object....");
+    log(php);
+    
+    var c_language = new course("C Language","45 days",4500);
+    log("displaying php c language object....");
+    log(c_language);
+    //to create total new object from existing object, we have to use object cloning
+    let python = {}; //empty object
+    log("displaying python empty object....");
+    log(python);
+    python = clone(c_language);
+    c_language.fees = 4000;
+    python.fees = 7500;
+    log("displaying php c language object....");
+    log(c_language);
+    log("displaying php python language object....");
+    log(python);
+</script>
+</body>
+</html>

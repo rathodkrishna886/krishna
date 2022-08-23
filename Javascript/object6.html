@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="2" align="center" cellpadding="10">
+            <tr>
+                <td>
+                    <input type="number" id="first" placeholder="enter number" onblur="calculate();">
+                </td>
+                <td>
+                    <input type="number" id="second" placeholder="enter another number" onblur="calculate();">
+                </td>
+                <td>
+                    <b>+</b><input type="number" id="addition" readonly />
+                </td>
+                <td>
+                    <b>-</b><input type="number" id="substraction" readonly />
+                </td>
+                <td>
+                    <b>*</b><input type="number" id="mutltiplication" readonly />
+                </td>
+                <td>
+                    <b>/</b><input type="number" id="division" readonly />
+                </td>
+                
+        </table>
+    </form>
+<script src="script.js"></script>
+<script>
+    class mymath{
+        // arrow functions 
+        add = (num1,num2) =>{
+            return num1 + num2;
+        }
+
+        sub = (num1,num2) =>{
+            return num1 - num2;
+        }
+
+        mul = (num1,num2) => {
+            return num1 * num2;
+        }
+        div = (num1,num2) =>{
+            return num1 / num2;
+        }
+    }
+
+    //creating object-variable
+    const m1 = new mymath();
+
+    let calculate = function(){
+        log("calculate method called...");  
+        var num1 = $("first").value;
+        var num2 = $("second").value;
+        if(isNaN(num1)==false && isNaN(num2)==false)
+        {
+            num1 = int(num1);
+            num2 = int(num2);
+            //both inputs are valid
+            // log(m1.add(num1,num2));
+            $("addition").value =  m1.add(num1,num2);
+            $("substraction").value =  m1.sub(num1,num2);
+            $("mutltiplication").value =  m1.mul(num1,num2);
+            $("division").value =  m1.div(num1,num2);
+        }
+    }
+</script>
+</body>
+</html>

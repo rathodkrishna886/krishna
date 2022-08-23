@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cookies Concept</h1>
+    <hr>
+    <h4>Create Cookies</h4>
+    <table align="center" border="2" cellpadding="10" width="50%">
+        <tr>
+            <td>enter cookie name</td>
+            <td>
+                <input type="text" id="cookie_name" />
+            </td>
+        </tr>
+        <tr>
+            <td>enter cookie value</td>
+            <td>
+                <input type="text" id="cookie_value" />
+            </td>
+        </tr>
+        <tr>
+            <td>enter cookie duration(days)</td>
+            <td>
+                <input type="text" id="cookie_days" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="Create Cookie" onclick="SaveCookie();">
+                <input type="button" value="get/read Cookie" onclick="ReadCookie();">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" id="output"></td>
+        </tr>
+    </table>
+<script src="https://theeasylearn.github.io/frontend3/javascript/script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script>
+    //create function SaveCookie
+    function SaveCookie(){
+        log("save cookie function called....");
+        var name,value,days;
+        name = $("cookie_name").value;
+        value = $("cookie_value").value;
+        days = $("cookie_days").value;
+        log("name = " + name);
+        log("value = " + value);
+        log("days = " + days);
+        setCookie(name,value,days);
+        $("output").innerHTML = "<h3>cookie has been created...<h3>";
+        
+        $("cookie_name").value = "";
+        $("cookie_value").value = "";
+        $("cookie_days").value = "";
+    }
+    function ReadCookie(){
+        log("ReadCookie function called....");
+        var name;
+        name = $("cookie_name").value;
+        log("name = " + name);
+        var value = getCookie(name);
+        if (value=="")
+            $("output").innerHTML = "<font color='red'>no such cookie</font>";
+        else
+            $("cookie_value").value = value;
+    }
+</script>
+</body>
+</html>

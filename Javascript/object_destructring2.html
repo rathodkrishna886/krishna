@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Destructring</h1>
+    <hr>
+    <p>use console to see output</p>
+    <script src="script.js"></script>
+    <script>
+        //create object
+        class person 
+        {
+            constructor(name,age,weight)
+            {
+                this.fullname = name;
+                this.age = age;
+                this.weight = weight;
+            }
+        };
+        let p1 = new person("Ankit Patel",37,75.00);
+        let p2 = new person("Jiya Patel",10,20.00);
+        let p3 = new person("Kashish Patel",37,50.00);
+        let family = [p1,p2,p3];
+        for (let index = 0; index < family.length; index++) {
+            let {fullname:PersonName,age:PersonAge,weight:PersonWeight} = family[index];
+            log(PersonName);
+            log(PersonAge);
+            let days = parseInt(PersonAge) * 365;
+            log("no of days lived so far = " + days);
+            log(PersonWeight);
+            log("---------------------------------------------------");
+        }
+        
+        
+    </script>
+</body>
+</html>
